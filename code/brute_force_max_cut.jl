@@ -13,7 +13,7 @@ function brute_force_max_cut(adj_lists)
     for vertex in A
       running_B = vcat(running_B, setdiff(adj_lists[vertex], A))
     end
-    if length(running_B) > length(current_max_partition)
+    if length(running_B) > current_max_cut
       current_max_partition = A
       current_max_cut = length(running_B)
     end
@@ -21,7 +21,8 @@ function brute_force_max_cut(adj_lists)
 
   println("max cut: $current_max_partition")
   println("max cut value: $current_max_cut")
-  return length(current_max_partition)
+  return current_max_cut
 end
 
-println(brute_force_max_cut(Dict(1=>[2,4], 2=>[1,3], 3=>[2,4], 4=>[1,3])))
+brute_force_max_cut(Dict(1=>[2,4], 2=>[1,3], 3=>[2,4], 4=>[1,3])) # max cut should be 4
+brute_force_max_cut(Dict(1=>[2,5], 2=>[1,3,5], 3=>[2,4], 4=>[3,5], 5=>[1,2,4])) # max cut should be 5
