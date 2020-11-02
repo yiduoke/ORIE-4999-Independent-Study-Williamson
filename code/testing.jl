@@ -7,20 +7,22 @@ include("greedy_max_cut.jl")
 
 
 """
-    generate_random_adjacency_lists(n)
+    generate_random_adjacency_lists(n,p)
 
 returns a randomly generated graph with `n` vertices and the
-number of edges in this graph.
+number of edges in this graph. For every pair of vertices,
+there's a `p` ∈ [0,1] probability there's an edge connecting them.
+If p isn't given, then it's 0.5 (i.e. 50% chance)
 
 The graph is in the form of adjacency lists
 """
-function generate_random_adjacency_lists(n)
+function generate_random_adjacency_lists(n, p=0.5)
     possible_edges = collect(combinations(1:n,2))
     adj_lists = Dict(1:n .=> [[] for i in 1:n])
     num_edges = 0
 
     for (u,v) in possible_edges
-        if rand(0:1)==0
+        if rand() < p
             adj_lists[u] = union(adj_lists[u], [v])
             adj_lists[v] = union(adj_lists[v], [u])
             num_edges+= 1
