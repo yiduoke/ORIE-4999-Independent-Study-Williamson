@@ -2,14 +2,10 @@ import Pkg
 Pkg.add("Combinatorics")
 Pkg.add("JuMP")
 Pkg.add("ProxSDP")
+Pkg.add("Distributions")
 using Combinatorics
-using JuMP, ProxSDP, LinearAlgebra
+using JuMP, ProxSDP, LinearAlgebra, Distributions
 
-function unique_edges(adj_lists)
-    n = length(adj_lists)
-    possible_edges = collect(combinations(1:n,2))
-    return filter(((u,v)=x) -> v in adj_lists[u], possible_edges)
-end
 
 function adj_lists_to_matrix(adj_lists)
     n = length(adj_lists)
@@ -23,13 +19,18 @@ function SDP_force_max_cut(adj_lists)
     adj_matrix = adj_lists_to_matrix(adj_lists)
     model = Model(with_optimizer(ProxSDP.Optimizer))
     @variable(model,  V[1:n, 1:n], PSD)
-    @objective(model, Max, 0.5 * dot(adj_matrix, V))
+    @objective(model, Max, 0.5 * dot(adj_matrix, 1 .- V))
     @constraint(model, diag(V) .== 1)
     JuMP.optimize!(model)
 
-    println(JuMP.value.(V))
-    return JuMP.value.(V)
+    factorization = cholesky(Hermitian(JuMP.value.(V)), Val(true), check = false)
+    Y = (factorization.P * factorization.L)'
+
+    r = rand(Normal(), n)
+    
+    A = filter(i -> dot(Y[1:n, i], r) < 0, 1:n)
+    return A
 end
 
-graph_1 = Dict(1=>[2,3], 2=>[1,3], 3=>[1,2])
-println(size(SDP_force_max_cut(graph_1)))
+graph_1 = Dict(1=>[2,4], 2=>[1,3], 3=>[2,4], 4=>[1,3])
+println(SDP_force_max_cut(graph_1))
