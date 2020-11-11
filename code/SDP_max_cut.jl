@@ -29,7 +29,8 @@ function SDP_force_max_cut(adj_lists)
     r = rand(Normal(), n)
     
     A = filter(i -> dot(Y[1:n, i], r) < 0, 1:n)
-    return A
+    cut_value = length(reduce(vcat, [setdiff(adj_lists[vertex], A) for vertex in A]))
+    return cut_value, A
 end
 
 graph_1 = Dict(1=>[2,4], 2=>[1,3], 3=>[2,4], 4=>[1,3])
