@@ -14,12 +14,12 @@ function adj_lists_to_matrix(adj_lists)
     return adj_matrix
 end
 
-function SDP_force_max_cut(adj_lists)
+function SDP_max_cut(adj_lists)
     n = length(adj_lists)
     adj_matrix = adj_lists_to_matrix(adj_lists)
     model = Model(with_optimizer(ProxSDP.Optimizer))
-    @variable(model,  V[1:n, 1:n], PSD)
-    @objective(model, Max, 0.5 * dot(adj_matrix, 1 .- V))
+    @variable(model, V[1:n, 1:n], PSD)
+    @objective(model, Max, 0.25 * dot(adj_matrix, 1 .- V))
     @constraint(model, diag(V) .== 1)
     JuMP.optimize!(model)
 
@@ -27,11 +27,9 @@ function SDP_force_max_cut(adj_lists)
     Y = (factorization.P * factorization.L)'
 
     r = rand(Normal(), n)
+    r /= norm(r)
     
     A = filter(i -> dot(Y[1:n, i], r) < 0, 1:n)
-    cut_value = length(reduce(vcat, [setdiff(adj_lists[vertex], A) for vertex in A]))
+    cut_value = length(A)>0 ? length(reduce(vcat, [setdiff(adj_lists[vertex], A) for vertex in A])) : 0
     return cut_value, A
 end
-
-graph_1 = Dict(1=>[2,4], 2=>[1,3], 3=>[2,4], 4=>[1,3])
-println(SDP_force_max_cut(graph_1))
