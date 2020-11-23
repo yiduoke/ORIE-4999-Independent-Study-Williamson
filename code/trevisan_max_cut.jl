@@ -3,6 +3,7 @@ Pkg.add("Combinatorics")
 using Combinatorics
 using LinearAlgebra
 include("helpers.jl")
+include("greedy_max_cut.jl")
 
 
 """
@@ -59,11 +60,27 @@ returns, for a given graph in adjacency list form `adj_lists`,
 the 0.531-approximation max cut value and its corresponding vertex 
 set partition.
 
+This is Recursive-Spectral-Cut from the Trevisan paper
+
 `adj_lists` is a Dict with each vertex as a key, whose value 
 is its neighboring vertices in the form of an Array.
 """
 function trevisan_max_cut(adj_lists)
+    y = two_thresholds_spectral_cut(adj_lists)
     
+    M = sum([y[i] != 0 || y[j] != 0 for i ∈ 1:n for j ∈ i+1:n])
+    C = sum([y[i] * y[j] == -1 for i ∈ 1:n for j ∈ i+1:n])
+    X = sum([abs(y[i] + y[j]) == 1 for i ∈ 1:n for j ∈ i+1:n])
+    
+    if (C + X/2 <= M/2)
+        return greedy_max_cut(adj_lists)
+    else
+        # filter((x) -> x % 3 == 0, [1:10]) 
+        L = filter(i -> y[i] == -1, 1:n)
+        R = filter(i -> y[i] == 1, 1:n)
+        V' = filter(i -> y[i] == 0, 1:n)
 
+        
+    end
     return (cut_value, A)
 end

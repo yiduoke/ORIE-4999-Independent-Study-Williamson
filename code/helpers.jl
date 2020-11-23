@@ -43,3 +43,20 @@ columns of `matrix`
 function smallest_eigenvector(matrix)
     return eigen(matrix).vectors[:,1] # eigen(matrix) returns sorted results in ascending order of eigenvalue
 end
+
+"""
+    induced_subgraph(adj_lists)
+
+returns the vertex-induced subgraph in adjacency matrix form of the
+graph represented by `adj_lists` 
+
+`adj_lists` is a Dict with each vertex as a key, whose value 
+is its neighboring vertices in the form of an Array.
+"""
+function induced_subgraph(adj_lists, V_prime)
+    n = length(adj_lists)
+    adj_matrix = adj_lists_to_matrix(adj_lists)
+    induced_subgraph = zeros(n,n)
+    [induced_subgraph[i,j] = adj_matrix[i,j] for i ∈ V_prime for j ∈ V_prime]
+    return induced_subgraph
+end
