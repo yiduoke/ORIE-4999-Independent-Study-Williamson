@@ -5,23 +5,8 @@ Pkg.add("ProxSDP")
 Pkg.add("Distributions")
 using Combinatorics
 using JuMP, ProxSDP, LinearAlgebra, Distributions
+include("helpers.jl")
 
-
-"""
-    adj_lists_to_matrix(adj_lists) 
-
-returns, for a given graph in adjacency list form `adj_lists`,
-the adjacency matrix.
-
-`adj_lists` is a Dict with each vertex as a key, whose value 
-is its neighboring vertices in the form of an Array.
-"""
-function adj_lists_to_matrix(adj_lists)
-    n = length(adj_lists)
-    adj_matrix = zeros(n,n)
-    [adj_matrix[i,j] = 1 for i ∈ 1:n for j ∈ adj_lists[i]]
-    return adj_matrix
-end
 
 
 """
