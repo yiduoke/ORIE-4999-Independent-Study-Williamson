@@ -96,11 +96,11 @@ println("SDP test 4. SDP max cut: $(SDP_test_case_4) (should be ≈$(0.878*8)=0.
 println("SDP test 5. SDP max cut: $(SDP_test_case_5) (should be ≈$(0.878*12)=0.878*12)")
 println()
 
-println("trevisan test 1. SDP max cut: $(trevisan_test_case_1) (should be ≈$(0.531*4)=0.531*4)")
-println("trevisan test 2. SDP max cut: $(trevisan_test_case_2) (should be ≈$(0.531*5)=0.531*5)")
-println("trevisan test 3. SDP max cut: $(trevisan_test_case_3) (should be ≈$(0.531*6)=0.531*6)")
-println("trevisan test 4. SDP max cut: $(trevisan_test_case_4) (should be ≈$(0.531*8)=0.531*8)")
-println("trevisan test 5. SDP max cut: $(trevisan_test_case_5) (should be ≈$(0.531*12)=0.531*12)")
+println("trevisan test 1. SDP max cut: $(trevisan_test_case_1) (should be ≥$(0.531*4)=0.531*4)")
+println("trevisan test 2. SDP max cut: $(trevisan_test_case_2) (should be ≥$(0.531*5)=0.531*5)")
+println("trevisan test 3. SDP max cut: $(trevisan_test_case_3) (should be ≥$(0.531*6)=0.531*6)")
+println("trevisan test 4. SDP max cut: $(trevisan_test_case_4) (should be ≥$(0.531*8)=0.531*8)")
+println("trevisan test 5. SDP max cut: $(trevisan_test_case_5) (should be ≥$(0.531*12)=0.531*12)")
 println()
 
 for i ∈ 6:15
