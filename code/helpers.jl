@@ -60,3 +60,7 @@ function induced_subgraph(adj_lists, V_prime)
     [induced_subgraph[i,j] = adj_matrix[i,j] for i ∈ V_prime for j ∈ V_prime]
     return induced_subgraph
 end
+
+function cut_value(adj_lists, A)
+    return length(reduce(vcat, [setdiff(adj_lists[vertex], A) for vertex in A]))
+end

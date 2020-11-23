@@ -74,13 +74,15 @@ function trevisan_max_cut(adj_lists)
     
     if (C + X/2 <= M/2)
         return greedy_max_cut(adj_lists)
-    else
-        # filter((x) -> x % 3 == 0, [1:10]) 
+    else 
         L = filter(i -> y[i] == -1, 1:n)
         R = filter(i -> y[i] == 1, 1:n)
-        V' = filter(i -> y[i] == 0, 1:n)
+        V_prime = filter(i -> y[i] == 0, 1:n)
 
-        
+        (cut_val, A) = trevisan_max_cut(induced_subgraph(adj_lists,V_prime))
+
+        cut_val_1 = cut_value(adj_lists, union(A,L))
+        cut_val_2 = cut_value(adj_lists, union(A,R))
+        return (cut_val_1, union(A,L)) ? cut_val_1 > cut_val_2 : (cut_val_2, union(A,R))
     end
-    return (cut_value, A)
 end

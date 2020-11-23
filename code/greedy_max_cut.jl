@@ -25,7 +25,7 @@ function greedy_max_cut(adj_lists)
 
         num_A_neighbors > num_B_neighbors ? B = union(B, [vertex]) : A = union(A, [vertex])
     end
-    cut_value = length(reduce(vcat, [setdiff(adj_lists[vertex], A) for vertex in A]))
+    cut_val = cut_value(adj_lists, A)
 
-    return (cut_value, A)
+    return (cut_val, A)
 end
