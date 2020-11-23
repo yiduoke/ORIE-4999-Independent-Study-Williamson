@@ -2,6 +2,7 @@ import Pkg
 Pkg.add("Combinatorics")
 using Combinatorics
 using Statistics
+include("helpers.jl")
 
 
 """
@@ -19,7 +20,7 @@ number of vertices.
 """
 function flip_coin_max_cut(adj_lists)
     A = reduce(vcat,[rand(0:1)==0 ? [i] : [] for i in 1:length(adj_lists)]) # after randomly getting 0 or 1, 0 means the vertex goes into A
-    cut_value = length(A)>0 ? length(reduce(vcat, [setdiff(adj_lists[vertex], A) for vertex in A])) : 0 # need the ternary operator because reduce doesn't work on empty lists
+    cut_val = cut_value(adj_lists, A)
 
-    return (cut_value, A)
+    return (cut_val, A)
 end

@@ -1,6 +1,7 @@
 import Pkg
 Pkg.add("Combinatorics")
 using Combinatorics
+include("helpers.jl")
 
 """
   brute_force_max_cut(adj_lists) 
@@ -21,7 +22,7 @@ function brute_force_max_cut(adj_lists)
   current_max_cut = 0 # running max cut value
 
   for A in all_possible_A # iterationg through each possible partition
-    current_cut_value = length(reduce(vcat, [setdiff(adj_lists[vertex], A) for vertex in A])) # value of (A,V-A) cut
+    current_cut_value = cut_value(adj_lists, A) # value of (A,V-A) cut
 
     if current_cut_value > current_max_cut # updating the values when we get a new max
       current_max_partition = A

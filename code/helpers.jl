@@ -62,5 +62,5 @@ function induced_subgraph(adj_lists, V_prime)
 end
 
 function cut_value(adj_lists, A)
-    return length(reduce(vcat, [setdiff(adj_lists[vertex], A) for vertex in A]))
+    return length(A)>0 ? length(reduce(vcat, [setdiff(adj_lists[vertex], A) for vertex in A])) : 0 # need the ternary operator because reduce doesn't work on empty lists
 end

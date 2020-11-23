@@ -39,6 +39,6 @@ function SDP_max_cut(adj_lists)
     r /= norm(r)
     
     A = filter(i -> dot(Y[1:n, i], r) < 0, 1:n)
-    cut_value = length(A)>0 ? length(reduce(vcat, [setdiff(adj_lists[vertex], A) for vertex in A])) : 0
-    return cut_value, A
+    cut_val = cut_value(adj_lists, A)
+    return cut_val, A
 end

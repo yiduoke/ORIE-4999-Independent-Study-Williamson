@@ -2,6 +2,7 @@ include("brute_force_max_cut.jl")
 include("flip_coin_max_cut.jl")
 include("greedy_max_cut.jl")
 include("SDP_max_cut.jl")
+include("trevisan_max_cut.jl")
 
 
 """
@@ -61,6 +62,12 @@ SDP_test_case_3 = mean([SDP_max_cut(graph_3)[1] for i in 1:100])
 SDP_test_case_4 = mean([SDP_max_cut(graph_4)[1] for i in 1:100])
 SDP_test_case_5 = mean([SDP_max_cut(graph_5)[1] for i in 1:100])
 
+trevisan_test_case_1 = mean([trevisan_max_cut(graph_1)[1] for i in 1:100])
+trevisan_test_case_2 = mean([trevisan_max_cut(graph_2)[1] for i in 1:100])
+trevisan_test_case_3 = mean([trevisan_max_cut(graph_3)[1] for i in 1:100])
+trevisan_test_case_4 = mean([trevisan_max_cut(graph_4)[1] for i in 1:100])
+trevisan_test_case_5 = mean([trevisan_max_cut(graph_5)[1] for i in 1:100])
+
 println("brute force test 1. max cut: $(brute_test_case_1[1]) (should be =4). max cut partition: $(brute_test_case_1[2])")
 println("brute force test 2. max cut: $(brute_test_case_2[1]) (should be =5). max cut partition: $(brute_test_case_2[2])")
 println("brute force test 3. max cut: $(brute_test_case_3[1]) (should be =6). max cut partition: $(brute_test_case_3[2])")
@@ -89,6 +96,13 @@ println("SDP test 4. SDP max cut: $(SDP_test_case_4) (should be ≈$(0.878*8)=0.
 println("SDP test 5. SDP max cut: $(SDP_test_case_5) (should be ≈$(0.878*12)=0.878*12)")
 println()
 
+println("trevisan test 1. SDP max cut: $(trevisan_test_case_1) (should be ≈$(0.531*4)=0.531*4)")
+println("trevisan test 2. SDP max cut: $(trevisan_test_case_2) (should be ≈$(0.531*5)=0.531*5)")
+println("trevisan test 3. SDP max cut: $(trevisan_test_case_3) (should be ≈$(0.531*6)=0.531*6)")
+println("trevisan test 4. SDP max cut: $(trevisan_test_case_4) (should be ≈$(0.531*8)=0.531*8)")
+println("trevisan test 5. SDP max cut: $(trevisan_test_case_5) (should be ≈$(0.531*12)=0.531*12)")
+println()
+
 for i ∈ 6:15
     for j ∈ 1:10
         generated_graph, num_edges = generate_random_adjacency_lists(i, rand()/2)
@@ -97,15 +111,18 @@ for i ∈ 6:15
         generated_coin_test_case = mean([flip_coin_max_cut(generated_graph)[1] for i in 1:100])
         generated_greedy_test_case = greedy_max_cut(generated_graph)[1]
         generated_SDP_test_case = mean([SDP_max_cut(generated_graph)[1] for i in 1:100])
+        generated_trevisan_test_case = trevisan_max_cut(generated_graph)[1]
 
         OPT = generated_brute_test_case[1]
         half_edges = div(num_edges,2)
         SDP_approx = 0.878 * OPT
+        trevisan_approx = 0.531 * OPT
 
         println("generated brute force test (OPT). max cut: $OPT")
         println("generated coin flip test. mean randomized max cut: $(generated_coin_test_case) (should be ≈$half_edges")
         println("generated greedy test. greedy max cut: $(generated_greedy_test_case) (should be ≥$half_edges)")
         println("generated SDP test. SDP max cut: $(generated_SDP_test_case) (should be ≈$SDP_approx")
+        println("generated trevisan test. trevisan max cut: $(generated_trevisan_test_case) (should be ≥$trevisan_approx")
         println()
     end
 end

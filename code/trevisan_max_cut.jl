@@ -42,7 +42,7 @@ function two_thresholds_spectral_cut(adj_lists)
     n = length(adj_lists)
 
     neg_sqrt_D = zeros(n,n)
-    [neg_sqrt_D[i,i] = D[i,i]^(-1/2) for i ∈ 1:n]
+    [neg_sqrt_D[i,i] = D[i,i]==0 ? 0 : D[i,i]^(-1/2) for i ∈ 1:n]
     x = smallest_eigenvector(neg_sqrt_D * A * neg_sqrt_D)
 
     Y = zeros(n,n)
@@ -66,6 +66,7 @@ This is Recursive-Spectral-Cut from the Trevisan paper
 is its neighboring vertices in the form of an Array.
 """
 function trevisan_max_cut(adj_lists)
+    n = length(adj_lists)
     y = two_thresholds_spectral_cut(adj_lists)
     
     M = sum([y[i] != 0 || y[j] != 0 for i ∈ 1:n for j ∈ i+1:n])

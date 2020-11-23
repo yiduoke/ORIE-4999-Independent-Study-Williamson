@@ -1,6 +1,7 @@
 import Pkg
 Pkg.add("Combinatorics")
 using Combinatorics
+include("helpers.jl")
 
 
 """
