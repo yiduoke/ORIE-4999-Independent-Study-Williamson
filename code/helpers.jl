@@ -41,5 +41,5 @@ of `matrix` in the form of a nx1 array where n is the number of
 columns of `matrix`
 """
 function smallest_eigenvector(matrix)
-    return eigvecs(A, [eigmin(matrix)])
+    return eigen(matrix).vectors[:,1]
 end
