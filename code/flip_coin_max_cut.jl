@@ -14,8 +14,8 @@ set partition. The expected cut value is |E|/2.
 `adj_lists` is a Dict with each vertex as a key, whose value 
 is its neighboring vertices in the form of an Array. 
 
-This is a randomized algorithm and linear in the number
-of vertices.
+This is a randomized algorithm and runs in time linear to the 
+number of vertices.
 """
 function flip_coin_max_cut(adj_lists)
     A = reduce(vcat,[rand(0:1)==0 ? [i] : [] for i in 1:length(adj_lists)]) # after randomly getting 0 or 1, 0 means the vertex goes into A

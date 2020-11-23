@@ -13,7 +13,7 @@ set partition. The expected cut value is |E|/2.
 `adj_lists` is a Dict with each vertex as a key, whose value 
 is its neighboring vertices in the form of an Array. 
 
-This is a greedy algorithm and linear in the number
+This is a greedy algorithm and runs in time linear to the number
 of vertices.
 """
 function greedy_max_cut(adj_lists)

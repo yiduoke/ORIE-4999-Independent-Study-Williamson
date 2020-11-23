@@ -11,8 +11,8 @@ the max cut value and its corresponding vertex set partition.
 `adj_lists` is a Dict with each vertex as a key, whose value 
 is its neighboring vertices in the form of an Array. 
 
-The algorithm is brute force and thus exponential time in 
-the number of vertices.
+The algorithm is brute force and thus runs in time exponential 
+to the number of vertices.
 """
 function brute_force_max_cut(adj_lists)
   n = length(adj_lists)
