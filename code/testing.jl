@@ -121,7 +121,7 @@ for i ∈ 6:15
         println("generated brute force test (OPT). max cut: $OPT")
         println("generated coin flip test. mean randomized max cut: $(generated_coin_test_case) (should be ≈$half_edges")
         println("generated greedy test. greedy max cut: $(generated_greedy_test_case) (should be ≥$half_edges)")
-        println("generated SDP test. SDP max cut: $(generated_SDP_test_case) (should be ≈$SDP_approx")
+        println("generated SDP test. SDP max cut: $(generated_SDP_test_case) (should be ≈$SDP_approx)")
         println("generated trevisan test. trevisan max cut: $(generated_trevisan_test_case) (should be ≥$trevisan_approx")
         println()
     end
