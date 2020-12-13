@@ -38,7 +38,8 @@ function SDP_max_cut(adj_lists)
     r = rand(Normal(), n)
     r /= norm(r)
     
-    A = filter(i -> dot(Y[1:n, i], r) < 0, 1:n)
+    Z = JuMP.value.(V)
+    A = filter(i -> dot(Z[1:n, i], r) < 0, 1:n)
     cut_val = cut_value(adj_lists, A)
     return cut_val, A
 end
