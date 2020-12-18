@@ -32,15 +32,13 @@ function SDP_max_cut(adj_lists)
     @constraint(model, diag(V) .== 1)
     JuMP.optimize!(model)
 
-    factorization = eigen(nearest_pos_def(JuMP.value.(V)))
+    factorization = cholesky(nearest_pos_def(JuMP.value.(V)))
 
     r = rand(Normal(), n)
     r /= norm(r)
     
-    Z = (factorization.vectors * sqrt.(Diagonal(factorization.values)))'
+    Z = factorization.U
     A = filter(i -> dot(Z[1:n, i], r) < 0, 1:n)
     cut_val = cut_value(adj_lists, A)
     return cut_val, A
 end
-
-#running this rn, didn't change since running; let's see

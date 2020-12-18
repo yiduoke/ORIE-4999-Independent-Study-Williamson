@@ -75,7 +75,7 @@ It is done by adding a small multiple of the identity matrix.
 function nearest_pos_def(matrix)
     k = 1/1000000000000000000
     orig_matrix = matrix
-    while minimum(eigen(matrix).values) < 0
+    while !isposdef(matrix)
         matrix = orig_matrix + I * k
         k *= 10
     end
