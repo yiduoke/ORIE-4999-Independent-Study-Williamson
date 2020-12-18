@@ -64,3 +64,21 @@ end
 function cut_value(adj_lists, A)
     return length(A)>0 ? length(reduce(vcat, [setdiff(adj_lists[vertex], A) for vertex in A])) : 0 # need the ternary operator because reduce doesn't work on empty lists
 end
+
+"""
+    nearest_pos_def(matrix)
+
+given a `matrix` that's almost positive definite, return a 
+near (not the nearest, but close) matrix that is positive definite.
+It is done by adding a small multiple of the identity matrix.
+"""
+function nearest_pos_def(matrix)
+    k = 1/1000000000000000000
+    orig_matrix = matrix
+    while minimum(eigen(matrix).values) < 0
+        matrix = orig_matrix + I * k
+        k *= 10
+    end
+    return matrix
+    print(eigvals(matrix))
+end
