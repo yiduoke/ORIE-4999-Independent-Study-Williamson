@@ -107,27 +107,21 @@ for i ∈ 15:50
     for j ∈ 1:10
         generated_graph, num_edges = generate_random_adjacency_lists(i, rand()/2)
         
-        # generated_brute_test_case = brute_force_max_cut(generated_graph)
         generated_coin_test_case = mean([flip_coin_max_cut(generated_graph)[1] for i in 1:100])
         generated_greedy_test_case = greedy_max_cut(generated_graph)[1]
         generated_SDP_test_case = mean([SDP_max_cut(generated_graph)[1] for i in 1:100])
         generated_trevisan_test_case = trevisan_max_cut(generated_graph)[1]
 
-        # OPT = generated_brute_test_case[1]
+        OPT_upper_bound = SDP_max_cut(generated_graph)[3]
         half_edges = div(num_edges,2)
-        # SDP_approx = 0.878 * OPT
-        # trevisan_approx = 0.531 * OPT
+        SDP_approx_bound = 0.878 * OPT_upper_bound
+        trevisan_approx_bound = 0.531 * OPT_upper_bound
 
-        OPT_from_SDP = generated_SDP_test_case / 0.878
-        OPT_from_trevisan = generated_trevisan_test_case / 0.531
+        println("\n all results should be ≤$OPT_upper_bound")
 
-        # println("generated brute force test (OPT). max cut: $OPT")
-        println("generated coin flip test. mean randomized max cut: $(generated_coin_test_case) (should be ≈$half_edges")
-        println("generated greedy test. greedy max cut: $(generated_greedy_test_case) (should be ≥$half_edges)")
-        # println("generated SDP test. SDP max cut: $(generated_SDP_test_case) (should be ≈$SDP_approx)")
-        println("generated SDP test. SDP max cut: $(generated_SDP_test_case)")
-        # println("generated trevisan test. trevisan max cut: $(generated_trevisan_test_case) (should be ≥$trevisan_approx)")
-        println("generated trevisan test. trevisan max cut: $(generated_trevisan_test_case)")
-        println()
+        println("generated coin flip test. mean randomized max cut: $generated_coin_test_case (should be ≈$half_edges")
+        println("generated greedy test. greedy max cut: $generated_greedy_test_case (should be ≥$half_edges)")
+        println("generated SDP test. SDP max cut: $generated_SDP_test_case (should be ≈$SDP_approx_bound)")
+        println("generated trevisan test. trevisan max cut: $generated_trevisan_test_case (should be ≈$trevisan_approx_bound)")
     end
 end
