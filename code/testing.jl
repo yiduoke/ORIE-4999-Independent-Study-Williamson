@@ -104,7 +104,7 @@ println("trevisan test 5. trevisan max cut: $(trevisan_test_case_5) (should be �
 println()
 
 for i ∈ 15:50
-    for j ∈ 1:10
+    for j ∈ 1:5
         generated_graph, num_edges = generate_random_adjacency_lists(i, rand()/2)
         
         generated_coin_test_case = mean([flip_coin_max_cut(generated_graph)[1] for i in 1:100])
@@ -117,7 +117,7 @@ for i ∈ 15:50
         SDP_approx_bound = 0.878 * OPT_upper_bound
         trevisan_approx_bound = 0.531 * OPT_upper_bound
 
-        println("\n all results should be ≤$OPT_upper_bound")
+        println("\nall results should be ≤$OPT_upper_bound")
 
         println("generated coin flip test. mean randomized max cut: $generated_coin_test_case (should be ≈$half_edges")
         println("generated greedy test. greedy max cut: $generated_greedy_test_case (should be ≥$half_edges)")
