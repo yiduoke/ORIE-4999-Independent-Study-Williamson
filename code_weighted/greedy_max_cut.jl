@@ -17,6 +17,7 @@ of vertices.
 function greedy_max_cut(adj_matrix)
     A = []
     B = []
+    n = num_vertices(adj_matrix)
     for vertex in 1:num_vertices(adj_matrix)
         relevant_row = adj_matrix[vertex, :]
         A_neighbors_weight = sum([relevant_row[i] for i ∈ filter(i -> relevant_row[i] != 0 && i in A, 1:n)])

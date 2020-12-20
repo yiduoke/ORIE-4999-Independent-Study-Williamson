@@ -28,18 +28,15 @@ function y_ik(x,i,k)
 end
 
 """
-    two_thresholds_spectral_cut(adj_lists)
+    two_thresholds_spectral_cut(adj_matrix)
 
-given a graph `adj_lists`, returns the vector specified in the
-2TSC algorithm in theorem 1
-
-`adj_lists` is a Dict with each vertex as a key, whose value 
-is its neighboring vertices in the form of an Array.
+given a graph `adj_matrix`, returns the vector specified in the
+2TSC algorithm in theorem 1 of the Trevisan paper
 """
-function two_thresholds_spectral_cut(adj_lists)
-    D = adj_lists_to_degree_matrix(adj_lists)
-    A = adj_lists_to_matrix(adj_lists)
-    n = length(adj_lists)
+function two_thresholds_spectral_cut(adj_matrix)
+    D = adj_matrix_to_degree_matrix(adj_matrix)
+    A = adj_matrix
+    n = num_vertices(adj_matrix)
 
     neg_sqrt_D = zeros(n,n)
     [neg_sqrt_D[i,i] = D[i,i]==0 ? 0 : D[i,i]^(-1/2) for i ∈ 1:n]
@@ -54,36 +51,33 @@ function two_thresholds_spectral_cut(adj_lists)
 end
 
 """
-    trevisan_max_cut(adj_lists) 
+    trevisan_max_cut(adj_matrix) 
 
-returns, for a given graph in adjacency list form `adj_lists`,
+returns, for a given graph in adjacency matrix form `adj_matrix`,
 the 0.531-approximation max cut value and its corresponding vertex 
 set partition.
 
 This is Recursive-Spectral-Cut from the Trevisan paper
-
-`adj_lists` is a Dict with each vertex as a key, whose value 
-is its neighboring vertices in the form of an Array.
 """
-function trevisan_max_cut(adj_lists)
-    n = length(adj_lists)
-    y = two_thresholds_spectral_cut(adj_lists)
+function trevisan_max_cut(adj_matrix)
+    n = num_vertices(adj_matrix)
+    y = two_thresholds_spectral_cut(adj_matrix)
     
     M = sum([y[i] != 0 || y[j] != 0 for i ∈ 1:n for j ∈ i+1:n])
     C = sum([y[i] * y[j] == -1 for i ∈ 1:n for j ∈ i+1:n])
     X = sum([abs(y[i] + y[j]) == 1 for i ∈ 1:n for j ∈ i+1:n])
     
     if (C + X/2 <= M/2)
-        return greedy_max_cut(adj_lists)
+        return greedy_max_cut(adj_matrix)
     else 
         L = filter(i -> y[i] == -1, 1:n)
         R = filter(i -> y[i] == 1, 1:n)
         V_prime = filter(i -> y[i] == 0, 1:n)
 
-        (cut_val, A) = trevisan_max_cut(induced_subgraph(adj_lists,V_prime))
+        (cut_val, A) = trevisan_max_cut(induced_subgraph(adj_matrix,V_prime))
 
-        cut_val_1 = cut_value(adj_lists, union(A,L))
-        cut_val_2 = cut_value(adj_lists, union(A,R))
+        cut_val_1 = cut_value(adj_matrix, union(A,L))
+        cut_val_2 = cut_value(adj_matrix, union(A,R))
         return (cut_val_1, union(A,L)) ? cut_val_1 > cut_val_2 : (cut_val_2, union(A,R))
     end
 end

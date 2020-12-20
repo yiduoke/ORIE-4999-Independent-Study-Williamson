@@ -1,8 +1,29 @@
 using LinearAlgebra
 
+
+"""
+    num_vertices(adj_matrix)
+
+returns the number of vertices in the graph `adj_matrix`
+"""
 function num_vertices(adj_matrix)
     return Int(sqrt(length(adj_matrix)))
 end
+
+
+"""
+    adj_matrix_to_degree_matrix(adj_matrix)
+
+given an adjacency matrix `adj_matrix`, return its corresponding
+degree matrix
+"""
+function adj_matrix_to_degree_matrix(adj_matrix)
+    n = num_vertices(adj_matrix)
+    deg_matrix = zeros(n,n)
+    [deg_matrix[i,i] = sum(adj_matrix[i, :]) for i ∈ 1:n]
+    return deg_matrix
+end
+
 
 """
     smallest_eigenvector(matrix)

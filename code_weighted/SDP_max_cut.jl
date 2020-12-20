@@ -40,6 +40,3 @@ function SDP_max_cut(adj_matrix)
     cut_val = cut_value(adj_matrix, A)
     return cut_val, A, maximized_objective
 end
-
-adj_matrix = [0 2 0 3; 2 0 4 0; 0 4 0 2; 3 0 2 0]
-println(SDP_max_cut(adj_matrix))
