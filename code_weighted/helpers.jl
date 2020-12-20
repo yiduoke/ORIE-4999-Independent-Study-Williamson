@@ -27,14 +27,16 @@ function induced_subgraph(adj_matrix, V_prime)
 end
 
 """
-    adj_list(adj_matrix, vertex)
+    adj_list_cut_val(adj_matrix, vertex, A)
 
-returns the list of neighboring nodes of `vertex` in the graph
-`adj_matrix`
+returns the total weight of the edges between `vertex` and each of its 
+neighboring vertices from graph `adj_matrix` that aren't in the vertex 
+subset `A`
 """
-function adj_list(adj_matrix, vertex)
+function adj_list_cut_val(adj_matrix, vertex, A)
+    n = Int(sqrt(length(adj_matrix)))
     relevant_row = adj_matrix[vertex, :]
-    return filter(x -> x != 0, relevant_row)
+    sum([relevant_row[i] for i ∈ filter(i -> relevant_row[i] != 0 && !(i in A), 1:n)])
 end
 
 
@@ -45,7 +47,7 @@ end
     where A is all vertices one side of the cut.
 """
 function cut_value(adj_matrix, A)
-    return length(A)>0 ? sum([sum(setdiff(adj_list(adj_matrix, vertex), A)) for vertex in A]) : 0 # need the ternary operator because reduce doesn't work on empty lists
+    return length(A)>0 ? sum([adj_list_cut(adj_matrix, vertex, A) for vertex in A]) : 0 # need the ternary operator because reduce doesn't work on empty lists
 end
 
 """
