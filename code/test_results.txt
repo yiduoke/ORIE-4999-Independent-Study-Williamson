@@ -5,10 +5,10 @@ brute force test 4. max cut: 8 (should be =8). max cut partition: [5, 6]
 brute force test 5. max cut: 12 (should be =12). max cut partition: [2, 4, 6, 8]
 
 coin flip test 1. mean randomized max cut: 1.94 (should be ≈2)
-coin flip test 2. mean randomized max cut: 3.21 (should be ≈3)
-coin flip test 3. mean randomized max cut: 3.1 (should be ≈3)
-coin flip test 4. mean randomized max cut: 4.75 (should be ≈5)
-coin flip test 5. mean randomized max cut: 5.92 (should be ≈6)
+coin flip test 2. mean randomized max cut: 3.02 (should be ≈3)
+coin flip test 3. mean randomized max cut: 3.02 (should be ≈3)
+coin flip test 4. mean randomized max cut: 4.84 (should be ≈5)
+coin flip test 5. mean randomized max cut: 5.98 (should be ≈6)
 
 greedy test 1. greedy max cut: 4 (should be ≥2)
 greedy test 2. greedy max cut: 5 (should be ≥3)
@@ -17,9 +17,9 @@ greedy test 4. greedy max cut: 8 (should be ≥5)
 greedy test 5. greedy max cut: 12 (should be ≥6)
 
 SDP test 1. SDP max cut: 4.0 (should be ≈3.512=0.878*4)
-SDP test 2. SDP max cut: 4.79 (should be ≈4.39=0.878*5)
+SDP test 2. SDP max cut: 4.76 (should be ≈4.39=0.878*5)
 SDP test 3. SDP max cut: 6.0 (should be ≈5.268=0.878*6)
-SDP test 4. SDP max cut: 7.98 (should be ≈7.024=0.878*8)
+SDP test 4. SDP max cut: 8.0 (should be ≈7.024=0.878*8)
 SDP test 5. SDP max cut: 12.0 (should be ≈10.536=0.878*12)
 
 trevisan test 1. trevisan max cut: 4.0 (should be ≥2.124=0.531*4)
@@ -28,603 +28,1083 @@ trevisan test 3. trevisan max cut: 6.0 (should be ≥3.186=0.531*6)
 trevisan test 4. trevisan max cut: 8.0 (should be ≥4.248=0.531*8)
 trevisan test 5. trevisan max cut: 12.0 (should be ≥6.372=0.531*12)
 
-generated brute force test (OPT). max cut: 0
+
+all results should be ≤16.04595228981531
+generated coin flip test. mean randomized max cut: 9.81 (should be ≈10
+generated greedy test. greedy max cut: 16 (should be ≥10)
+generated SDP test. SDP max cut: 15.44 (should be ≈14.088346110457843)
+generated trevisan test. trevisan max cut: 16 (should be ≈8.52040066589193)
+
+all results should be ≤7.2503788565293075
+generated coin flip test. mean randomized max cut: 3.79 (should be ≈4
+generated greedy test. greedy max cut: 7 (should be ≥4)
+generated SDP test. SDP max cut: 7.0 (should be ≈6.365832636032732)
+generated trevisan test. trevisan max cut: 7 (should be ≈3.8499511728170623)
+
+all results should be ≤9.001234990236378
+generated coin flip test. mean randomized max cut: 4.36 (should be ≈4
+generated greedy test. greedy max cut: 9 (should be ≥4)
+generated SDP test. SDP max cut: 9.0 (should be ≈7.90308432142754)
+generated trevisan test. trevisan max cut: 9 (should be ≈4.779655779815517)
+
+all results should be ≤26.043625919159215
+generated coin flip test. mean randomized max cut: 15.77 (should be ≈16
+generated greedy test. greedy max cut: 22 (should be ≥16)
+generated SDP test. SDP max cut: 24.37 (should be ≈22.86630355702179)
+generated trevisan test. trevisan max cut: 22 (should be ≈13.829165363073544)
+
+all results should be ≤1.9999679278731834
+generated coin flip test. mean randomized max cut: 0.88 (should be ≈1
+generated greedy test. greedy max cut: 2 (should be ≥1)
+generated SDP test. SDP max cut: 2.0 (should be ≈1.755971840672655)
+generated trevisan test. trevisan max cut: 2 (should be ≈1.0619829697006604)
+
+all results should be ≤31.7305771838652
+generated coin flip test. mean randomized max cut: 18.79 (should be ≈19
+generated greedy test. greedy max cut: 31 (should be ≥19)
+generated SDP test. SDP max cut: 29.71 (should be ≈27.859446767433646)
+generated trevisan test. trevisan max cut: 31 (should be ≈16.84893648463242)
+
+all results should be ≤29.58970918952148
+generated coin flip test. mean randomized max cut: 18.51 (should be ≈18
+generated greedy test. greedy max cut: 28 (should be ≥18)
+generated SDP test. SDP max cut: 27.26 (should be ≈25.97976466839986)
+generated trevisan test. trevisan max cut: 28 (should be ≈15.712135579635905)
+
+all results should be ≤38.88390271191376
+generated coin flip test. mean randomized max cut: 26.1 (should be ≈26
+generated greedy test. greedy max cut: 35 (should be ≥26)
+generated SDP test. SDP max cut: 36.9 (should be ≈34.14006658106028)
+generated trevisan test. trevisan max cut: 35 (should be ≈20.64735234002621)
+
+all results should be ≤8.998975958701166
+generated coin flip test. mean randomized max cut: 4.38 (should be ≈4
+generated greedy test. greedy max cut: 9 (should be ≥4)
+generated SDP test. SDP max cut: 9.0 (should be ≈7.901100891739624)
+generated trevisan test. trevisan max cut: 9 (should be ≈4.77845623407032)
+
+all results should be ≤43.1142586009544
+generated coin flip test. mean randomized max cut: 30.76 (should be ≈31
+generated greedy test. greedy max cut: 40 (should be ≥31)
+generated SDP test. SDP max cut: 40.18 (should be ≈37.854319051637965)
+generated trevisan test. trevisan max cut: 40 (should be ≈22.893671317106786)
+
+all results should be ≤0.0
 generated coin flip test. mean randomized max cut: 0.0 (should be ≈0
 generated greedy test. greedy max cut: 0 (should be ≥0)
 generated SDP test. SDP max cut: 0.0 (should be ≈0.0)
-generated trevisan test. trevisan max cut: 0 (should be ≥0.0
+generated trevisan test. trevisan max cut: 0 (should be ≈0.0)
 
-generated brute force test (OPT). max cut: 6
-generated coin flip test. mean randomized max cut: 3.6 (should be ≈3
+all results should be ≤50.70018118774058
+generated coin flip test. mean randomized max cut: 36.56 (should be ≈36
+generated greedy test. greedy max cut: 47 (should be ≥36)
+generated SDP test. SDP max cut: 47.44 (should be ≈44.51475908283623)
+generated trevisan test. trevisan max cut: 47 (should be ≈26.92179621069025)
+
+all results should be ≤19.66249856544279
+generated coin flip test. mean randomized max cut: 10.79 (should be ≈10
+generated greedy test. greedy max cut: 17 (should be ≥10)
+generated SDP test. SDP max cut: 18.46 (should be ≈17.263673740458767)
+generated trevisan test. trevisan max cut: 17 (should be ≈10.440786738250122)
+
+all results should be ≤7.000700440559571
+generated coin flip test. mean randomized max cut: 3.35 (should be ≈3
+generated greedy test. greedy max cut: 7 (should be ≥3)
+generated SDP test. SDP max cut: 7.0 (should be ≈6.146614986811303)
+generated trevisan test. trevisan max cut: 7 (should be ≈3.7173719339371325)
+
+all results should be ≤35.24868612296652
+generated coin flip test. mean randomized max cut: 23.35 (should be ≈23
+generated greedy test. greedy max cut: 33 (should be ≥23)
+generated SDP test. SDP max cut: 32.32 (should be ≈30.948346415964604)
+generated trevisan test. trevisan max cut: 33 (should be ≈18.71705233129522)
+
+all results should be ≤1.9999788462084789
+generated coin flip test. mean randomized max cut: 1.06 (should be ≈1
+generated greedy test. greedy max cut: 2 (should be ≥1)
+generated SDP test. SDP max cut: 2.0 (should be ≈1.7559814269710445)
+generated trevisan test. trevisan max cut: 2 (should be ≈1.0619887673367023)
+
+all results should be ≤24.801883412884376
+generated coin flip test. mean randomized max cut: 14.79 (should be ≈14
+generated greedy test. greedy max cut: 21 (should be ≥14)
+generated SDP test. SDP max cut: 22.96 (should be ≈21.776053636512483)
+generated trevisan test. trevisan max cut: 21 (should be ≈13.169800092241605)
+
+all results should be ≤45.96666164104977
+generated coin flip test. mean randomized max cut: 29.5 (should be ≈29
+generated greedy test. greedy max cut: 44 (should be ≥29)
+generated SDP test. SDP max cut: 42.77 (should be ≈40.3587289208417)
+generated trevisan test. trevisan max cut: 44 (should be ≈24.408297331397428)
+
+all results should be ≤5.000500814002586
+generated coin flip test. mean randomized max cut: 2.48 (should be ≈2
+generated greedy test. greedy max cut: 5 (should be ≥2)
+generated SDP test. SDP max cut: 5.0 (should be ≈4.390439714694271)
+generated trevisan test. trevisan max cut: 5 (should be ≈2.6552659322353733)
+
+all results should be ≤40.22363805047933
+generated coin flip test. mean randomized max cut: 26.18 (should be ≈26
+generated greedy test. greedy max cut: 36 (should be ≥26)
+generated SDP test. SDP max cut: 37.24 (should be ≈35.31635420832085)
+generated trevisan test. trevisan max cut: 36 (should be ≈21.358751804804527)
+
+all results should be ≤18.22065941262685
+generated coin flip test. mean randomized max cut: 9.42 (should be ≈9
+generated greedy test. greedy max cut: 18 (should be ≥9)
+generated SDP test. SDP max cut: 17.74 (should be ≈15.997738964286375)
+generated trevisan test. trevisan max cut: 18 (should be ≈9.675170148104858)
+
+all results should be ≤29.204207202316958
+generated coin flip test. mean randomized max cut: 17.98 (should be ≈18
+generated greedy test. greedy max cut: 28 (should be ≥18)
+generated SDP test. SDP max cut: 26.82 (should be ≈25.64129392363429)
+generated trevisan test. trevisan max cut: 28 (should be ≈15.507434024430305)
+
+all results should be ≤6.000290607380064
+generated coin flip test. mean randomized max cut: 2.97 (should be ≈3
 generated greedy test. greedy max cut: 6 (should be ≥3)
-generated SDP test. SDP max cut: 6.0 (should be ≈5.268)
-generated trevisan test. trevisan max cut: 6 (should be ≥3.186
+generated SDP test. SDP max cut: 6.0 (should be ≈5.268255153279696)
+generated trevisan test. trevisan max cut: 6 (should be ≈3.186154312518814)
 
-generated brute force test (OPT). max cut: 4
-generated coin flip test. mean randomized max cut: 2.64 (should be ≈2
-generated greedy test. greedy max cut: 4 (should be ≥2)
-generated SDP test. SDP max cut: 3.99 (should be ≈3.512)
-generated trevisan test. trevisan max cut: 4 (should be ≥2.124
+all results should be ≤51.97488072202147
+generated coin flip test. mean randomized max cut: 35.52 (should be ≈35
+generated greedy test. greedy max cut: 46 (should be ≥35)
+generated SDP test. SDP max cut: 48.81 (should be ≈45.63394527393485)
+generated trevisan test. trevisan max cut: 46 (should be ≈27.5986616633934)
 
-generated brute force test (OPT). max cut: 3
-generated coin flip test. mean randomized max cut: 1.46 (should be ≈1
-generated greedy test. greedy max cut: 3 (should be ≥1)
-generated SDP test. SDP max cut: 3.0 (should be ≈2.634)
-generated trevisan test. trevisan max cut: 3 (should be ≥1.593
+all results should be ≤34.17595710365811
+generated coin flip test. mean randomized max cut: 20.35 (should be ≈20
+generated greedy test. greedy max cut: 31 (should be ≥20)
+generated SDP test. SDP max cut: 31.36 (should be ≈30.00649033701182)
+generated trevisan test. trevisan max cut: 31 (should be ≈18.147433222042455)
 
-generated brute force test (OPT). max cut: 5
+all results should be ≤29.36771273357758
+generated coin flip test. mean randomized max cut: 17.73 (should be ≈17
+generated greedy test. greedy max cut: 25 (should be ≥17)
+generated SDP test. SDP max cut: 26.89 (should be ≈25.784851780081116)
+generated trevisan test. trevisan max cut: 25 (should be ≈15.594255461529697)
+
+all results should be ≤36.30879526668326
+generated coin flip test. mean randomized max cut: 21.39 (should be ≈22
+generated greedy test. greedy max cut: 31 (should be ≥22)
+generated SDP test. SDP max cut: 33.38 (should be ≈31.879122244147904)
+generated trevisan test. trevisan max cut: 31 (should be ≈19.279970286608812)
+
+all results should be ≤34.130343688581846
+generated coin flip test. mean randomized max cut: 20.23 (should be ≈20
+generated greedy test. greedy max cut: 32 (should be ≥20)
+generated SDP test. SDP max cut: 31.1 (should be ≈29.96644175857486)
+generated trevisan test. trevisan max cut: 32 (should be ≈18.12321249863696)
+
+all results should be ≤33.51798035048804
+generated coin flip test. mean randomized max cut: 19.47 (should be ≈20
+generated greedy test. greedy max cut: 30 (should be ≥20)
+generated SDP test. SDP max cut: 30.56 (should be ≈29.4287867477285)
+generated trevisan test. trevisan max cut: 30 (should be ≈17.798047566109148)
+
+all results should be ≤42.112545018174224
+generated coin flip test. mean randomized max cut: 25.72 (should be ≈26
+generated greedy test. greedy max cut: 35 (should be ≥26)
+generated SDP test. SDP max cut: 39.18 (should be ≈36.974814525956965)
+generated trevisan test. trevisan max cut: 35 (should be ≈22.361761404650515)
+
+all results should be ≤31.194733252611936
+generated coin flip test. mean randomized max cut: 17.47 (should be ≈17
+generated greedy test. greedy max cut: 27 (should be ≥17)
+generated SDP test. SDP max cut: 28.72 (should be ≈27.38897579579328)
+generated trevisan test. trevisan max cut: 27 (should be ≈16.56440335713694)
+
+all results should be ≤25.277761107145963
+generated coin flip test. mean randomized max cut: 13.55 (should be ≈14
+generated greedy test. greedy max cut: 23 (should be ≥14)
+generated SDP test. SDP max cut: 23.28 (should be ≈22.193874252074156)
+generated trevisan test. trevisan max cut: 23 (should be ≈13.422491147894506)
+
+all results should be ≤31.689072407532336
+generated coin flip test. mean randomized max cut: 17.59 (should be ≈17
+generated greedy test. greedy max cut: 24 (should be ≥17)
+generated SDP test. SDP max cut: 29.77 (should be ≈27.82300557381339)
+generated trevisan test. trevisan max cut: 24 (should be ≈16.82689744839967)
+
+all results should be ≤53.373205854760194
+generated coin flip test. mean randomized max cut: 35.02 (should be ≈35
+generated greedy test. greedy max cut: 45 (should be ≥35)
+generated SDP test. SDP max cut: 49.27 (should be ≈46.86167474047945)
+generated trevisan test. trevisan max cut: 45 (should be ≈28.341172308877663)
+
+all results should be ≤65.67410452867011
+generated coin flip test. mean randomized max cut: 45.36 (should be ≈45
+generated greedy test. greedy max cut: 60 (should be ≥45)
+generated SDP test. SDP max cut: 62.15 (should be ≈57.66186377617236)
+generated trevisan test. trevisan max cut: 60 (should be ≈34.872949504723834)
+
+all results should be ≤42.47634952878309
+generated coin flip test. mean randomized max cut: 24.97 (should be ≈25
+generated greedy test. greedy max cut: 37 (should be ≥25)
+generated SDP test. SDP max cut: 39.14 (should be ≈37.29423488627155)
+generated trevisan test. trevisan max cut: 37 (should be ≈22.55494159978382)
+
+all results should be ≤31.285461558511155
+generated coin flip test. mean randomized max cut: 17.54 (should be ≈18
+generated greedy test. greedy max cut: 28 (should be ≥18)
+generated SDP test. SDP max cut: 28.23 (should be ≈27.468635248372795)
+generated trevisan test. trevisan max cut: 28 (should be ≈16.612580087569423)
+
+all results should be ≤38.03847021646697
+generated coin flip test. mean randomized max cut: 22.58 (should be ≈22
+generated greedy test. greedy max cut: 34 (should be ≥22)
+generated SDP test. SDP max cut: 35.11 (should be ≈33.397776850058)
+generated trevisan test. trevisan max cut: 34 (should be ≈20.19842768494396)
+
+all results should be ≤0.0
+generated coin flip test. mean randomized max cut: 0.0 (should be ≈0
+generated greedy test. greedy max cut: 0 (should be ≥0)
+generated SDP test. SDP max cut: 0.0 (should be ≈0.0)
+generated trevisan test. trevisan max cut: 0 (should be ≈0.0)
+
+all results should be ≤25.09536134717997
+generated coin flip test. mean randomized max cut: 13.22 (should be ≈13
+generated greedy test. greedy max cut: 22 (should be ≥13)
+generated SDP test. SDP max cut: 23.98 (should be ≈22.033727262824016)
+generated trevisan test. trevisan max cut: 22 (should be ≈13.325636875352565)
+
+all results should be ≤93.67714188280662
+generated coin flip test. mean randomized max cut: 71.59 (should be ≈71
+generated greedy test. greedy max cut: 90 (should be ≥71)
+generated SDP test. SDP max cut: 87.96 (should be ≈82.24853057310422)
+generated trevisan test. trevisan max cut: 90 (should be ≈49.742562339770316)
+
+all results should be ≤88.2485819930757
+generated coin flip test. mean randomized max cut: 63.02 (should be ≈63
+generated greedy test. greedy max cut: 80 (should be ≥63)
+generated SDP test. SDP max cut: 82.14 (should be ≈77.48225498992046)
+generated trevisan test. trevisan max cut: 80 (should be ≈46.8599970383232)
+
+all results should be ≤12.001356989152704
+generated coin flip test. mean randomized max cut: 5.9 (should be ≈6
+generated greedy test. greedy max cut: 11 (should be ≥6)
+generated SDP test. SDP max cut: 12.0 (should be ≈10.537191436476075)
+generated trevisan test. trevisan max cut: 11 (should be ≈6.372720561240087)
+
+all results should be ≤77.2666973838667
+generated coin flip test. mean randomized max cut: 56.01 (should be ≈55
+generated greedy test. greedy max cut: 69 (should be ≥55)
+generated SDP test. SDP max cut: 71.69 (should be ≈67.84016030303496)
+generated trevisan test. trevisan max cut: 69 (should be ≈41.02861631083322)
+
+all results should be ≤66.73551318072167
+generated coin flip test. mean randomized max cut: 45.24 (should be ≈46
+generated greedy test. greedy max cut: 58 (should be ≥46)
+generated SDP test. SDP max cut: 61.37 (should be ≈58.59378057267362)
+generated trevisan test. trevisan max cut: 58 (should be ≈35.43655749896321)
+
+all results should be ≤35.63531330509612
+generated coin flip test. mean randomized max cut: 20.27 (should be ≈21
+generated greedy test. greedy max cut: 29 (should be ≥21)
+generated SDP test. SDP max cut: 32.97 (should be ≈31.287805081874392)
+generated trevisan test. trevisan max cut: 29 (should be ≈18.92235136500604)
+
+all results should be ≤81.48571443878976
+generated coin flip test. mean randomized max cut: 56.25 (should be ≈56
+generated greedy test. greedy max cut: 76 (should be ≥56)
+generated SDP test. SDP max cut: 76.08 (should be ≈71.54445727725741)
+generated trevisan test. trevisan max cut: 76 (should be ≈43.268914366997365)
+
+all results should be ≤60.754339417348575
+generated coin flip test. mean randomized max cut: 39.72 (should be ≈40
+generated greedy test. greedy max cut: 56 (should be ≥40)
+generated SDP test. SDP max cut: 56.85 (should be ≈53.34231000843205)
+generated trevisan test. trevisan max cut: 56 (should be ≈32.260554230612094)
+
+all results should be ≤23.99371667922619
+generated coin flip test. mean randomized max cut: 12.1 (should be ≈12
+generated greedy test. greedy max cut: 21 (should be ≥12)
+generated SDP test. SDP max cut: 24.0 (should be ≈21.066483244360594)
+generated trevisan test. trevisan max cut: 21 (should be ≈12.740663556669107)
+
+all results should be ≤47.10592421238345
+generated coin flip test. mean randomized max cut: 28.65 (should be ≈28
+generated greedy test. greedy max cut: 40 (should be ≥28)
+generated SDP test. SDP max cut: 43.24 (should be ≈41.35900145847267)
+generated trevisan test. trevisan max cut: 40 (should be ≈25.013245756775614)
+
+all results should be ≤90.36200718968442
+generated coin flip test. mean randomized max cut: 67.2 (should be ≈67
+generated greedy test. greedy max cut: 85 (should be ≥67)
+generated SDP test. SDP max cut: 84.59 (should be ≈79.33784231254292)
+generated trevisan test. trevisan max cut: 85 (should be ≈47.98222581772243)
+
+all results should be ≤69.76688425038712
+generated coin flip test. mean randomized max cut: 47.02 (should be ≈47
+generated greedy test. greedy max cut: 59 (should be ≥47)
+generated SDP test. SDP max cut: 64.06 (should be ≈61.25532437183989)
+generated trevisan test. trevisan max cut: 59 (should be ≈37.046215536955565)
+
+all results should be ≤80.42752680347903
+generated coin flip test. mean randomized max cut: 57.08 (should be ≈57
+generated greedy test. greedy max cut: 73 (should be ≥57)
+generated SDP test. SDP max cut: 74.61 (should be ≈70.61536853345459)
+generated trevisan test. trevisan max cut: 73 (should be ≈42.70701673264737)
+
+all results should be ≤71.35421765954337
+generated coin flip test. mean randomized max cut: 48.44 (should be ≈48
+generated greedy test. greedy max cut: 62 (should be ≥48)
+generated SDP test. SDP max cut: 66.1 (should be ≈62.649003105079075)
+generated trevisan test. trevisan max cut: 62 (should be ≈37.88908957721753)
+
+all results should be ≤57.42177029343272
+generated coin flip test. mean randomized max cut: 38.43 (should be ≈38
+generated greedy test. greedy max cut: 51 (should be ≥38)
+generated SDP test. SDP max cut: 52.28 (should be ≈50.41631431763393)
+generated trevisan test. trevisan max cut: 51 (should be ≈30.490960025812775)
+
+all results should be ≤43.28238394404288
+generated coin flip test. mean randomized max cut: 24.43 (should be ≈24
+generated greedy test. greedy max cut: 36 (should be ≥24)
+generated SDP test. SDP max cut: 39.6 (should be ≈38.00193310286964)
+generated trevisan test. trevisan max cut: 36 (should be ≈22.98294587428677)
+
+all results should be ≤42.68661425206864
+generated coin flip test. mean randomized max cut: 24.28 (should be ≈25
+generated greedy test. greedy max cut: 37 (should be ≥25)
+generated SDP test. SDP max cut: 38.92 (should be ≈37.478847313316265)
+generated trevisan test. trevisan max cut: 37 (should be ≈22.666592167848446)
+
+all results should be ≤4.000662615854191
+generated coin flip test. mean randomized max cut: 1.93 (should be ≈2
+generated greedy test. greedy max cut: 3 (should be ≥2)
+generated SDP test. SDP max cut: 4.0 (should be ≈3.51258177671998)
+generated trevisan test. trevisan max cut: 3 (should be ≈2.1243518490185753)
+
+all results should be ≤93.72264882485558
+generated coin flip test. mean randomized max cut: 66.13 (should be ≈65
+generated greedy test. greedy max cut: 83 (should be ≥65)
+generated SDP test. SDP max cut: 86.9 (should be ≈82.2884856682232)
+generated trevisan test. trevisan max cut: 83 (should be ≈49.766726525998315)
+
+all results should be ≤92.83644545070355
+generated coin flip test. mean randomized max cut: 64.44 (should be ≈64
+generated greedy test. greedy max cut: 85 (should be ≥64)
+generated SDP test. SDP max cut: 86.67 (should be ≈81.51039910571772)
+generated trevisan test. trevisan max cut: 85 (should be ≈49.29615253432359)
+
+all results should be ≤70.40762232765692
+generated coin flip test. mean randomized max cut: 45.2 (should be ≈45
+generated greedy test. greedy max cut: 66 (should be ≥45)
+generated SDP test. SDP max cut: 64.45 (should be ≈61.81789240368278)
+generated trevisan test. trevisan max cut: 66 (should be ≈37.38644745598583)
+
+all results should be ≤103.03433146660365
+generated coin flip test. mean randomized max cut: 73.59 (should be ≈74
+generated greedy test. greedy max cut: 94 (should be ≥74)
+generated SDP test. SDP max cut: 95.54 (should be ≈90.464143027678)
+generated trevisan test. trevisan max cut: 94 (should be ≈54.71123000876654)
+
+all results should be ≤30.19489021077978
+generated coin flip test. mean randomized max cut: 16.78 (should be ≈16
+generated greedy test. greedy max cut: 24 (should be ≥16)
+generated SDP test. SDP max cut: 29.53 (should be ≈26.511113605064647)
+generated trevisan test. trevisan max cut: 24 (should be ≈16.033486701924062)
+
+all results should be ≤91.15905373219287
+generated coin flip test. mean randomized max cut: 64.85 (should be ≈64
+generated greedy test. greedy max cut: 83 (should be ≥64)
+generated SDP test. SDP max cut: 84.22 (should be ≈80.03764917686534)
+generated trevisan test. trevisan max cut: 83 (should be ≈48.40545753179442)
+
+all results should be ≤23.058979202482483
+generated coin flip test. mean randomized max cut: 11.53 (should be ≈12
+generated greedy test. greedy max cut: 22 (should be ≥12)
+generated SDP test. SDP max cut: 22.43 (should be ≈20.245783739779622)
+generated trevisan test. trevisan max cut: 22 (should be ≈12.244317956518199)
+
+all results should be ≤109.04761730862259
+generated coin flip test. mean randomized max cut: 79.95 (should be ≈79
+generated greedy test. greedy max cut: 102 (should be ≥79)
+generated SDP test. SDP max cut: 101.56 (should be ≈95.74380799697063)
+generated trevisan test. trevisan max cut: 102 (should be ≈57.9042847908786)
+
+all results should be ≤67.3453504261731
+generated coin flip test. mean randomized max cut: 42.91 (should be ≈43
+generated greedy test. greedy max cut: 59 (should be ≥43)
+generated SDP test. SDP max cut: 62.09 (should be ≈59.12921767417998)
+generated trevisan test. trevisan max cut: 59 (should be ≈35.76038107629792)
+
+all results should be ≤71.84469114866104
+generated coin flip test. mean randomized max cut: 45.68 (should be ≈45
+generated greedy test. greedy max cut: 59 (should be ≥45)
+generated SDP test. SDP max cut: 66.7 (should be ≈63.079638828524395)
+generated trevisan test. trevisan max cut: 59 (should be ≈38.14953099993902)
+
+all results should be ≤87.94105304136079
+generated coin flip test. mean randomized max cut: 60.51 (should be ≈61
+generated greedy test. greedy max cut: 79 (should be ≥61)
+generated SDP test. SDP max cut: 80.86 (should be ≈77.21224457031477)
+generated trevisan test. trevisan max cut: 79 (should be ≈46.69669916496258)
+
+all results should be ≤57.464175602867556
+generated coin flip test. mean randomized max cut: 35.15 (should be ≈35
+generated greedy test. greedy max cut: 52 (should be ≥35)
+generated SDP test. SDP max cut: 52.72 (should be ≈50.45354617931771)
+generated trevisan test. trevisan max cut: 52 (should be ≈30.513477245122672)
+
+all results should be ≤73.66144497316189
+generated coin flip test. mean randomized max cut: 47.21 (should be ≈47
+generated greedy test. greedy max cut: 67 (should be ≥47)
+generated SDP test. SDP max cut: 67.61 (should be ≈64.67474868643615)
+generated trevisan test. trevisan max cut: 67 (should be ≈39.11422728074896)
+
+all results should be ≤84.38302107902598
+generated coin flip test. mean randomized max cut: 57.24 (should be ≈57
+generated greedy test. greedy max cut: 78 (should be ≥57)
+generated SDP test. SDP max cut: 77.59 (should be ≈74.0882925073848)
+generated trevisan test. trevisan max cut: 78 (should be ≈44.8073841929628)
+
+all results should be ≤35.024549154176235
+generated coin flip test. mean randomized max cut: 19.18 (should be ≈19
+generated greedy test. greedy max cut: 31 (should be ≥19)
+generated SDP test. SDP max cut: 32.37 (should be ≈30.751554157366733)
+generated trevisan test. trevisan max cut: 31 (should be ≈18.598035600867583)
+
+all results should be ≤107.76326820901618
+generated coin flip test. mean randomized max cut: 76.96 (should be ≈77
+generated greedy test. greedy max cut: 98 (should be ≥77)
+generated SDP test. SDP max cut: 99.74 (should be ≈94.6161494875162)
+generated trevisan test. trevisan max cut: 98 (should be ≈57.22229541898759)
+
+all results should be ≤77.95004357346143
+generated coin flip test. mean randomized max cut: 51.39 (should be ≈52
+generated greedy test. greedy max cut: 73 (should be ≥52)
+generated SDP test. SDP max cut: 71.79 (should be ≈68.44013825749913)
+generated trevisan test. trevisan max cut: 73 (should be ≈41.39147313750802)
+
+all results should be ≤95.81023263542322
+generated coin flip test. mean randomized max cut: 64.53 (should be ≈65
+generated greedy test. greedy max cut: 88 (should be ≥65)
+generated SDP test. SDP max cut: 88.6 (should be ≈84.12138425390158)
+generated trevisan test. trevisan max cut: 88 (should be ≈50.87523352940973)
+
+all results should be ≤113.02639521644537
+generated coin flip test. mean randomized max cut: 81.37 (should be ≈81
+generated greedy test. greedy max cut: 104 (should be ≥81)
+generated SDP test. SDP max cut: 105.1 (should be ≈99.23717500003903)
+generated trevisan test. trevisan max cut: 104 (should be ≈60.01701585993249)
+
+all results should be ≤100.92000390466865
+generated coin flip test. mean randomized max cut: 71.11 (should be ≈70
+generated greedy test. greedy max cut: 92 (should be ≥70)
+generated SDP test. SDP max cut: 93.27 (should be ≈88.60776342829907)
+generated trevisan test. trevisan max cut: 92 (should be ≈53.58852207337905)
+
+all results should be ≤5.000308677271491
 generated coin flip test. mean randomized max cut: 2.58 (should be ≈2
 generated greedy test. greedy max cut: 5 (should be ≥2)
-generated SDP test. SDP max cut: 5.0 (should be ≈4.39)
-generated trevisan test. trevisan max cut: 5 (should be ≥2.6550000000000002
+generated SDP test. SDP max cut: 5.0 (should be ≈4.390271018644369)
+generated trevisan test. trevisan max cut: 5 (should be ≈2.6551639076311617)
 
-generated brute force test (OPT). max cut: 4
-generated coin flip test. mean randomized max cut: 2.07 (should be ≈2
-generated greedy test. greedy max cut: 4 (should be ≥2)
-generated SDP test. SDP max cut: 4.0 (should be ≈3.512)
-generated trevisan test. trevisan max cut: 4 (should be ≥2.124
+all results should be ≤64.57540058533661
+generated coin flip test. mean randomized max cut: 39.49 (should be ≈39
+generated greedy test. greedy max cut: 60 (should be ≥39)
+generated SDP test. SDP max cut: 59.01 (should be ≈56.697201713925544)
+generated trevisan test. trevisan max cut: 60 (should be ≈34.28953771081374)
 
-generated brute force test (OPT). max cut: 0
-generated coin flip test. mean randomized max cut: 0.0 (should be ≈0
-generated greedy test. greedy max cut: 0 (should be ≥0)
-generated SDP test. SDP max cut: 0.0 (should be ≈0.0)
-generated trevisan test. trevisan max cut: 0 (should be ≥0.0
+all results should be ≤86.64473299788489
+generated coin flip test. mean randomized max cut: 57.79 (should be ≈57
+generated greedy test. greedy max cut: 79 (should be ≥57)
+generated SDP test. SDP max cut: 79.32 (should be ≈76.07407557214293)
+generated trevisan test. trevisan max cut: 79 (should be ≈46.00835322187688)
 
-generated brute force test (OPT). max cut: 1
-generated coin flip test. mean randomized max cut: 0.43 (should be ≈0
-generated greedy test. greedy max cut: 1 (should be ≥0)
-generated SDP test. SDP max cut: 1.0 (should be ≈0.878)
-generated trevisan test. trevisan max cut: 1 (should be ≥0.531
+all results should be ≤51.908990696052456
+generated coin flip test. mean randomized max cut: 28.73 (should be ≈29
+generated greedy test. greedy max cut: 42 (should be ≥29)
+generated SDP test. SDP max cut: 48.41 (should be ≈45.57609383113406)
+generated trevisan test. trevisan max cut: 42 (should be ≈27.563674059603855)
 
-generated brute force test (OPT). max cut: 2
-generated coin flip test. mean randomized max cut: 1.07 (should be ≈1
-generated greedy test. greedy max cut: 2 (should be ≥1)
-generated SDP test. SDP max cut: 2.0 (should be ≈1.756)
-generated trevisan test. trevisan max cut: 2 (should be ≥1.062
+all results should be ≤36.23280808321134
+generated coin flip test. mean randomized max cut: 20.15 (should be ≈19
+generated greedy test. greedy max cut: 31 (should be ≥19)
+generated SDP test. SDP max cut: 33.37 (should be ≈31.812405497059554)
+generated trevisan test. trevisan max cut: 31 (should be ≈19.23962109218522)
 
-generated brute force test (OPT). max cut: 6
-generated coin flip test. mean randomized max cut: 4.16 (should be ≈4
-generated greedy test. greedy max cut: 6 (should be ≥4)
-generated SDP test. SDP max cut: 5.67 (should be ≈5.268)
-generated trevisan test. trevisan max cut: 6 (should be ≥3.186
+all results should be ≤31.786433625757976
+generated coin flip test. mean randomized max cut: 16.08 (should be ≈16
+generated greedy test. greedy max cut: 29 (should be ≥16)
+generated SDP test. SDP max cut: 30.11 (should be ≈27.908488723415502)
+generated trevisan test. trevisan max cut: 29 (should be ≈16.878596255277486)
 
-generated brute force test (OPT). max cut: 2
-generated coin flip test. mean randomized max cut: 1.0 (should be ≈1
-generated greedy test. greedy max cut: 2 (should be ≥1)
-generated SDP test. SDP max cut: 2.0 (should be ≈1.756)
-generated trevisan test. trevisan max cut: 2 (should be ≥1.062
+all results should be ≤26.462718235359006
+generated coin flip test. mean randomized max cut: 14.3 (should be ≈14
+generated greedy test. greedy max cut: 23 (should be ≥14)
+generated SDP test. SDP max cut: 25.65 (should be ≈23.234266610645207)
+generated trevisan test. trevisan max cut: 23 (should be ≈14.051703382975633)
 
-generated brute force test (OPT). max cut: 8
-generated coin flip test. mean randomized max cut: 5.59 (should be ≈5
-generated greedy test. greedy max cut: 8 (should be ≥5)
-generated SDP test. SDP max cut: 8.0 (should be ≈7.024)
-generated trevisan test. trevisan max cut: 8 (should be ≥4.248
+all results should be ≤84.4528478778688
+generated coin flip test. mean randomized max cut: 55.27 (should be ≈55
+generated greedy test. greedy max cut: 78 (should be ≥55)
+generated SDP test. SDP max cut: 76.81 (should be ≈74.14960043676881)
+generated trevisan test. trevisan max cut: 78 (should be ≈44.84446222314834)
 
-generated brute force test (OPT). max cut: 6
-generated coin flip test. mean randomized max cut: 3.43 (should be ≈3
-generated greedy test. greedy max cut: 6 (should be ≥3)
-generated SDP test. SDP max cut: 5.95 (should be ≈5.268)
-generated trevisan test. trevisan max cut: 6 (should be ≥3.186
+all results should be ≤139.27529561264237
+generated coin flip test. mean randomized max cut: 100.26 (should be ≈101
+generated greedy test. greedy max cut: 123 (should be ≥101)
+generated SDP test. SDP max cut: 129.61 (should be ≈122.2837095479)
+generated trevisan test. trevisan max cut: 123 (should be ≈73.9551819703131)
 
-generated brute force test (OPT). max cut: 5
-generated coin flip test. mean randomized max cut: 3.03 (should be ≈3
-generated greedy test. greedy max cut: 4 (should be ≥3)
-generated SDP test. SDP max cut: 4.97 (should be ≈4.39)
-generated trevisan test. trevisan max cut: 4 (should be ≥2.6550000000000002
+all results should be ≤57.90852183383985
+generated coin flip test. mean randomized max cut: 33.3 (should be ≈33
+generated greedy test. greedy max cut: 50 (should be ≥33)
+generated SDP test. SDP max cut: 53.91 (should be ≈50.843682170111386)
+generated trevisan test. trevisan max cut: 50 (should be ≈30.749425093768963)
 
-generated brute force test (OPT). max cut: 3
-generated coin flip test. mean randomized max cut: 1.45 (should be ≈1
-generated greedy test. greedy max cut: 3 (should be ≥1)
-generated SDP test. SDP max cut: 3.0 (should be ≈2.634)
-generated trevisan test. trevisan max cut: 3 (should be ≥1.593
+all results should be ≤73.51733254510953
+generated coin flip test. mean randomized max cut: 46.34 (should be ≈46
+generated greedy test. greedy max cut: 65 (should be ≥46)
+generated SDP test. SDP max cut: 67.68 (should be ≈64.54821797460616)
+generated trevisan test. trevisan max cut: 65 (should be ≈39.03770358145316)
 
-generated brute force test (OPT). max cut: 8
-generated coin flip test. mean randomized max cut: 5.48 (should be ≈5
-generated greedy test. greedy max cut: 8 (should be ≥5)
-generated SDP test. SDP max cut: 7.7 (should be ≈7.024)
-generated trevisan test. trevisan max cut: 8 (should be ≥4.248
+all results should be ≤76.99238739968104
+generated coin flip test. mean randomized max cut: 48.03 (should be ≈48
+generated greedy test. greedy max cut: 72 (should be ≥48)
+generated SDP test. SDP max cut: 70.85 (should be ≈67.59931613691995)
+generated trevisan test. trevisan max cut: 72 (should be ≈40.88295770923063)
 
-generated brute force test (OPT). max cut: 2
-generated coin flip test. mean randomized max cut: 1.02 (should be ≈1
-generated greedy test. greedy max cut: 2 (should be ≥1)
-generated SDP test. SDP max cut: 2.0 (should be ≈1.756)
-generated trevisan test. trevisan max cut: 2 (should be ≥1.062
+all results should be ≤104.9743662694145
+generated coin flip test. mean randomized max cut: 70.78 (should be ≈70
+generated greedy test. greedy max cut: 98 (should be ≥70)
+generated SDP test. SDP max cut: 96.01 (should be ≈92.16749358454594)
+generated trevisan test. trevisan max cut: 98 (should be ≈55.741388489059105)
 
-generated brute force test (OPT). max cut: 3
-generated coin flip test. mean randomized max cut: 1.69 (should be ≈1
-generated greedy test. greedy max cut: 3 (should be ≥1)
-generated SDP test. SDP max cut: 3.0 (should be ≈2.634)
-generated trevisan test. trevisan max cut: 3 (should be ≥1.593
+all results should be ≤80.47483446517907
+generated coin flip test. mean randomized max cut: 52.61 (should be ≈52
+generated greedy test. greedy max cut: 72 (should be ≥52)
+generated SDP test. SDP max cut: 73.45 (should be ≈70.65690466042723)
+generated trevisan test. trevisan max cut: 72 (should be ≈42.73213710101009)
 
-generated brute force test (OPT). max cut: 0
-generated coin flip test. mean randomized max cut: 0.0 (should be ≈0
-generated greedy test. greedy max cut: 0 (should be ≥0)
-generated SDP test. SDP max cut: 0.0 (should be ≈0.0)
-generated trevisan test. trevisan max cut: 0 (should be ≥0.0
+all results should be ≤137.99169301201619
+generated coin flip test. mean randomized max cut: 96.82 (should be ≈98
+generated greedy test. greedy max cut: 125 (should be ≥98)
+generated SDP test. SDP max cut: 127.93 (should be ≈121.15670646455021)
+generated trevisan test. trevisan max cut: 125 (should be ≈73.2735889893806)
 
-generated brute force test (OPT). max cut: 2
-generated coin flip test. mean randomized max cut: 1.07 (should be ≈1
-generated greedy test. greedy max cut: 2 (should be ≥1)
-generated SDP test. SDP max cut: 2.0 (should be ≈1.756)
-generated trevisan test. trevisan max cut: 2 (should be ≥1.062
+all results should be ≤34.2225786830788
+generated coin flip test. mean randomized max cut: 17.68 (should be ≈18
+generated greedy test. greedy max cut: 28 (should be ≥18)
+generated SDP test. SDP max cut: 32.57 (should be ≈30.047424083743188)
+generated trevisan test. trevisan max cut: 28 (should be ≈18.172189280714843)
 
-generated brute force test (OPT). max cut: 9
-generated coin flip test. mean randomized max cut: 4.93 (should be ≈5
-generated greedy test. greedy max cut: 9 (should be ≥5)
-generated SDP test. SDP max cut: 8.55 (should be ≈7.902)
-generated trevisan test. trevisan max cut: 9 (should be ≥4.779
+all results should be ≤41.16919738430812
+generated coin flip test. mean randomized max cut: 23.11 (should be ≈22
+generated greedy test. greedy max cut: 35 (should be ≥22)
+generated SDP test. SDP max cut: 38.73 (should be ≈36.14655530342253)
+generated trevisan test. trevisan max cut: 35 (should be ≈21.860843811067614)
 
-generated brute force test (OPT). max cut: 1
-generated coin flip test. mean randomized max cut: 0.41 (should be ≈0
-generated greedy test. greedy max cut: 1 (should be ≥0)
-generated SDP test. SDP max cut: 1.0 (should be ≈0.878)
-generated trevisan test. trevisan max cut: 1 (should be ≥0.531
+all results should be ≤98.6256099614015
+generated coin flip test. mean randomized max cut: 66.01 (should be ≈66
+generated greedy test. greedy max cut: 87 (should be ≥66)
+generated SDP test. SDP max cut: 90.8 (should be ≈86.59328554611051)
+generated trevisan test. trevisan max cut: 87 (should be ≈52.370198889504195)
 
-generated brute force test (OPT). max cut: 6
-generated coin flip test. mean randomized max cut: 3.37 (should be ≈3
-generated greedy test. greedy max cut: 6 (should be ≥3)
-generated SDP test. SDP max cut: 6.0 (should be ≈5.268)
-generated trevisan test. trevisan max cut: 6 (should be ≥3.186
+all results should be ≤38.22025019013111
+generated coin flip test. mean randomized max cut: 20.0 (should be ≈20
+generated greedy test. greedy max cut: 36 (should be ≥20)
+generated SDP test. SDP max cut: 36.47 (should be ≈33.55737966693511)
+generated trevisan test. trevisan max cut: 36 (should be ≈20.29495285095962)
 
-generated brute force test (OPT). max cut: 4
-generated coin flip test. mean randomized max cut: 2.09 (should be ≈2
-generated greedy test. greedy max cut: 4 (should be ≥2)
-generated SDP test. SDP max cut: 4.0 (should be ≈3.512)
-generated trevisan test. trevisan max cut: 4 (should be ≥2.124
+all results should be ≤85.61896905819786
+generated coin flip test. mean randomized max cut: 55.34 (should be ≈56
+generated greedy test. greedy max cut: 81 (should be ≥56)
+generated SDP test. SDP max cut: 78.35 (should be ≈75.17345483309772)
+generated trevisan test. trevisan max cut: 81 (should be ≈45.46367256990307)
 
-generated brute force test (OPT). max cut: 7
-generated coin flip test. mean randomized max cut: 3.93 (should be ≈4
-generated greedy test. greedy max cut: 7 (should be ≥4)
-generated SDP test. SDP max cut: 7.0 (should be ≈6.146)
-generated trevisan test. trevisan max cut: 7 (should be ≥3.717
+all results should be ≤71.42375502119569
+generated coin flip test. mean randomized max cut: 43.11 (should be ≈43
+generated greedy test. greedy max cut: 65 (should be ≥43)
+generated SDP test. SDP max cut: 64.83 (should be ≈62.710056908609815)
+generated trevisan test. trevisan max cut: 65 (should be ≈37.92601391625491)
 
-generated brute force test (OPT). max cut: 2
-generated coin flip test. mean randomized max cut: 1.08 (should be ≈1
-generated greedy test. greedy max cut: 2 (should be ≥1)
-generated SDP test. SDP max cut: 2.0 (should be ≈1.756)
-generated trevisan test. trevisan max cut: 2 (should be ≥1.062
-
-generated brute force test (OPT). max cut: 8
-generated coin flip test. mean randomized max cut: 4.16 (should be ≈4
-generated greedy test. greedy max cut: 8 (should be ≥4)
-generated SDP test. SDP max cut: 8.0 (should be ≈7.024)
-generated trevisan test. trevisan max cut: 8 (should be ≥4.248
-
-generated brute force test (OPT). max cut: 6
-generated coin flip test. mean randomized max cut: 2.91 (should be ≈3
-generated greedy test. greedy max cut: 6 (should be ≥3)
-generated SDP test. SDP max cut: 6.0 (should be ≈5.268)
-generated trevisan test. trevisan max cut: 6 (should be ≥3.186
-
-generated brute force test (OPT). max cut: 10
-generated coin flip test. mean randomized max cut: 4.72 (should be ≈5
-generated greedy test. greedy max cut: 10 (should be ≥5)
-generated SDP test. SDP max cut: 10.0 (should be ≈8.78)
-generated trevisan test. trevisan max cut: 10 (should be ≥5.3100000000000005
-
-generated brute force test (OPT). max cut: 12
-generated coin flip test. mean randomized max cut: 7.38 (should be ≈7
-generated greedy test. greedy max cut: 12 (should be ≥7)
-generated SDP test. SDP max cut: 11.48 (should be ≈10.536)
-generated trevisan test. trevisan max cut: 12 (should be ≥6.372
-
-generated brute force test (OPT). max cut: 8
-generated coin flip test. mean randomized max cut: 4.25 (should be ≈4
-generated greedy test. greedy max cut: 7 (should be ≥4)
-generated SDP test. SDP max cut: 8.0 (should be ≈7.024)
-generated trevisan test. trevisan max cut: 7 (should be ≥4.248
-
-generated brute force test (OPT). max cut: 1
-generated coin flip test. mean randomized max cut: 0.45 (should be ≈0
-generated greedy test. greedy max cut: 1 (should be ≥0)
-generated SDP test. SDP max cut: 1.0 (should be ≈0.878)
-generated trevisan test. trevisan max cut: 1 (should be ≥0.531
-
-generated brute force test (OPT). max cut: 4
-generated coin flip test. mean randomized max cut: 1.78 (should be ≈2
-generated greedy test. greedy max cut: 4 (should be ≥2)
-generated SDP test. SDP max cut: 4.0 (should be ≈3.512)
-generated trevisan test. trevisan max cut: 4 (should be ≥2.124
-
-generated brute force test (OPT). max cut: 9
-generated coin flip test. mean randomized max cut: 5.13 (should be ≈5
-generated greedy test. greedy max cut: 9 (should be ≥5)
-generated SDP test. SDP max cut: 8.69 (should be ≈7.902)
-generated trevisan test. trevisan max cut: 9 (should be ≥4.779
-
-generated brute force test (OPT). max cut: 4
-generated coin flip test. mean randomized max cut: 1.89 (should be ≈2
-generated greedy test. greedy max cut: 4 (should be ≥2)
-generated SDP test. SDP max cut: 4.0 (should be ≈3.512)
-generated trevisan test. trevisan max cut: 4 (should be ≥2.124
-
-generated brute force test (OPT). max cut: 4
-generated coin flip test. mean randomized max cut: 2.17 (should be ≈2
-generated greedy test. greedy max cut: 4 (should be ≥2)
-generated SDP test. SDP max cut: 4.0 (should be ≈3.512)
-generated trevisan test. trevisan max cut: 4 (should be ≥2.124
-
-generated brute force test (OPT). max cut: 6
-generated coin flip test. mean randomized max cut: 3.6 (should be ≈3
-generated greedy test. greedy max cut: 6 (should be ≥3)
-generated SDP test. SDP max cut: 6.0 (should be ≈5.268)
-generated trevisan test. trevisan max cut: 6 (should be ≥3.186
-
-generated brute force test (OPT). max cut: 1
-generated coin flip test. mean randomized max cut: 0.45 (should be ≈0
-generated greedy test. greedy max cut: 1 (should be ≥0)
-generated SDP test. SDP max cut: 1.0 (should be ≈0.878)
-generated trevisan test. trevisan max cut: 1 (should be ≥0.531
-
-generated brute force test (OPT). max cut: 7
-generated coin flip test. mean randomized max cut: 4.03 (should be ≈4
-generated greedy test. greedy max cut: 6 (should be ≥4)
-generated SDP test. SDP max cut: 6.97 (should be ≈6.146)
-generated trevisan test. trevisan max cut: 6 (should be ≥3.717
-
-generated brute force test (OPT). max cut: 0
-generated coin flip test. mean randomized max cut: 0.0 (should be ≈0
-generated greedy test. greedy max cut: 0 (should be ≥0)
-generated SDP test. SDP max cut: 0.0 (should be ≈0.0)
-generated trevisan test. trevisan max cut: 0 (should be ≥0.0
-
-generated brute force test (OPT). max cut: 9
-generated coin flip test. mean randomized max cut: 4.74 (should be ≈4
-generated greedy test. greedy max cut: 8 (should be ≥4)
-generated SDP test. SDP max cut: 9.0 (should be ≈7.902)
-generated trevisan test. trevisan max cut: 8 (should be ≥4.779
-
-generated brute force test (OPT). max cut: 4
-generated coin flip test. mean randomized max cut: 1.97 (should be ≈2
-generated greedy test. greedy max cut: 4 (should be ≥2)
-generated SDP test. SDP max cut: 4.0 (should be ≈3.512)
-generated trevisan test. trevisan max cut: 4 (should be ≥2.124
-
-generated brute force test (OPT). max cut: 4
-generated coin flip test. mean randomized max cut: 2.0 (should be ≈2
-generated greedy test. greedy max cut: 3 (should be ≥2)
-generated SDP test. SDP max cut: 4.0 (should be ≈3.512)
-generated trevisan test. trevisan max cut: 3 (should be ≥2.124
-
-generated brute force test (OPT). max cut: 11
-generated coin flip test. mean randomized max cut: 6.19 (should be ≈6
+all results should be ≤12.001212920496435
+generated coin flip test. mean randomized max cut: 6.07 (should be ≈6
 generated greedy test. greedy max cut: 11 (should be ≥6)
-generated SDP test. SDP max cut: 10.49 (should be ≈9.658)
-generated trevisan test. trevisan max cut: 11 (should be ≥5.841
+generated SDP test. SDP max cut: 12.0 (should be ≈10.53706494419587)
+generated trevisan test. trevisan max cut: 11 (should be ≈6.372644060783608)
 
-generated brute force test (OPT). max cut: 15
-generated coin flip test. mean randomized max cut: 9.92 (should be ≈9
-generated greedy test. greedy max cut: 15 (should be ≥9)
-generated SDP test. SDP max cut: 14.58 (should be ≈13.17)
-generated trevisan test. trevisan max cut: 15 (should be ≥7.965000000000001
+all results should be ≤116.04977818660187
+generated coin flip test. mean randomized max cut: 78.27 (should be ≈78
+generated greedy test. greedy max cut: 107 (should be ≥78)
+generated SDP test. SDP max cut: 107.81 (should be ≈101.89170524783644)
+generated trevisan test. trevisan max cut: 107 (should be ≈61.622432217085596)
 
-generated brute force test (OPT). max cut: 9
-generated coin flip test. mean randomized max cut: 4.88 (should be ≈5
-generated greedy test. greedy max cut: 8 (should be ≥5)
-generated SDP test. SDP max cut: 8.53 (should be ≈7.902)
-generated trevisan test. trevisan max cut: 8 (should be ≥4.779
+all results should be ≤130.82057097307634
+generated coin flip test. mean randomized max cut: 93.82 (should be ≈92
+generated greedy test. greedy max cut: 118 (should be ≥92)
+generated SDP test. SDP max cut: 121.63 (should be ≈114.86046131436103)
+generated trevisan test. trevisan max cut: 118 (should be ≈69.46572318670354)
 
-generated brute force test (OPT). max cut: 16
-generated coin flip test. mean randomized max cut: 10.63 (should be ≈10
-generated greedy test. greedy max cut: 15 (should be ≥10)
-generated SDP test. SDP max cut: 15.41 (should be ≈14.048)
-generated trevisan test. trevisan max cut: 15 (should be ≥8.496
+all results should be ≤196.64473155408905
+generated coin flip test. mean randomized max cut: 153.18 (should be ≈153
+generated greedy test. greedy max cut: 185 (should be ≥153)
+generated SDP test. SDP max cut: 184.83 (should be ≈172.6540743044902)
+generated trevisan test. trevisan max cut: 185 (should be ≈104.4183524552213)
 
-generated brute force test (OPT). max cut: 9
-generated coin flip test. mean randomized max cut: 6.21 (should be ≈6
-generated greedy test. greedy max cut: 9 (should be ≥6)
-generated SDP test. SDP max cut: 8.89 (should be ≈7.902)
-generated trevisan test. trevisan max cut: 9 (should be ≥4.779
+all results should be ≤105.17996082994902
+generated coin flip test. mean randomized max cut: 71.94 (should be ≈71
+generated greedy test. greedy max cut: 93 (should be ≥71)
+generated SDP test. SDP max cut: 96.18 (should be ≈92.34800560869525)
+generated trevisan test. trevisan max cut: 93 (should be ≈55.85055920070293)
 
-generated brute force test (OPT). max cut: 8
-generated coin flip test. mean randomized max cut: 4.05 (should be ≈4
-generated greedy test. greedy max cut: 7 (should be ≥4)
-generated SDP test. SDP max cut: 8.0 (should be ≈7.024)
-generated trevisan test. trevisan max cut: 7 (should be ≥4.248
+all results should be ≤111.28725098423666
+generated coin flip test. mean randomized max cut: 74.85 (should be ≈74
+generated greedy test. greedy max cut: 95 (should be ≥74)
+generated SDP test. SDP max cut: 101.69 (should be ≈97.71020636415979)
+generated trevisan test. trevisan max cut: 95 (should be ≈59.09353027262967)
 
-generated brute force test (OPT). max cut: 12
-generated coin flip test. mean randomized max cut: 7.41 (should be ≈7
-generated greedy test. greedy max cut: 12 (should be ≥7)
-generated SDP test. SDP max cut: 11.71 (should be ≈10.536)
-generated trevisan test. trevisan max cut: 12 (should be ≥6.372
+all results should be ≤40.37838954349209
+generated coin flip test. mean randomized max cut: 22.41 (should be ≈22
+generated greedy test. greedy max cut: 36 (should be ≥22)
+generated SDP test. SDP max cut: 37.41 (should be ≈35.45222601918606)
+generated trevisan test. trevisan max cut: 36 (should be ≈21.440924847594303)
 
-generated brute force test (OPT). max cut: 12
-generated coin flip test. mean randomized max cut: 6.87 (should be ≈7
-generated greedy test. greedy max cut: 11 (should be ≥7)
-generated SDP test. SDP max cut: 11.8 (should be ≈10.536)
-generated trevisan test. trevisan max cut: 11 (should be ≥6.372
+all results should be ≤189.97198015267315
+generated coin flip test. mean randomized max cut: 144.25 (should be ≈144
+generated greedy test. greedy max cut: 171 (should be ≥144)
+generated SDP test. SDP max cut: 177.99 (should be ≈166.79539857404703)
+generated trevisan test. trevisan max cut: 171 (should be ≈100.87512146106945)
 
-generated brute force test (OPT). max cut: 7
-generated coin flip test. mean randomized max cut: 3.89 (should be ≈4
-generated greedy test. greedy max cut: 7 (should be ≥4)
-generated SDP test. SDP max cut: 6.99 (should be ≈6.146)
-generated trevisan test. trevisan max cut: 7 (should be ≥3.717
+all results should be ≤117.90553596498383
+generated coin flip test. mean randomized max cut: 79.0 (should be ≈78
+generated greedy test. greedy max cut: 109 (should be ≥78)
+generated SDP test. SDP max cut: 109.3 (should be ≈103.5210605772558)
+generated trevisan test. trevisan max cut: 109 (should be ≈62.60783959740642)
 
-generated brute force test (OPT). max cut: 4
-generated coin flip test. mean randomized max cut: 2.04 (should be ≈2
-generated greedy test. greedy max cut: 4 (should be ≥2)
-generated SDP test. SDP max cut: 4.0 (should be ≈3.512)
-generated trevisan test. trevisan max cut: 4 (should be ≥2.124
+all results should be ≤54.2335643456875
+generated coin flip test. mean randomized max cut: 30.5 (should be ≈31
+generated greedy test. greedy max cut: 47 (should be ≥31)
+generated SDP test. SDP max cut: 50.94 (should be ≈47.617069495513626)
+generated trevisan test. trevisan max cut: 47 (should be ≈28.798022667560062)
 
-generated brute force test (OPT). max cut: 12
-generated coin flip test. mean randomized max cut: 6.15 (should be ≈6
-generated greedy test. greedy max cut: 9 (should be ≥6)
-generated SDP test. SDP max cut: 12.0 (should be ≈10.536)
-generated trevisan test. trevisan max cut: 9 (should be ≥6.372
+all results should be ≤87.24759208639608
+generated coin flip test. mean randomized max cut: 56.85 (should be ≈55
+generated greedy test. greedy max cut: 73 (should be ≥55)
+generated SDP test. SDP max cut: 79.13 (should be ≈76.60338585185576)
+generated trevisan test. trevisan max cut: 73 (should be ≈46.32847139787632)
 
-generated brute force test (OPT). max cut: 6
-generated coin flip test. mean randomized max cut: 3.03 (should be ≈3
-generated greedy test. greedy max cut: 6 (should be ≥3)
-generated SDP test. SDP max cut: 6.0 (should be ≈5.268)
-generated trevisan test. trevisan max cut: 6 (should be ≥3.186
+all results should be ≤22.005600142182615
+generated coin flip test. mean randomized max cut: 11.08 (should be ≈11
+generated greedy test. greedy max cut: 21 (should be ≥11)
+generated SDP test. SDP max cut: 22.0 (should be ≈19.320916924836336)
+generated trevisan test. trevisan max cut: 21 (should be ≈11.68497367549897)
 
-generated brute force test (OPT). max cut: 10
-generated coin flip test. mean randomized max cut: 6.06 (should be ≈6
-generated greedy test. greedy max cut: 8 (should be ≥6)
-generated SDP test. SDP max cut: 9.73 (should be ≈8.78)
-generated trevisan test. trevisan max cut: 8 (should be ≥5.3100000000000005
+all results should be ≤44.01637159730422
+generated coin flip test. mean randomized max cut: 23.66 (should be ≈23
+generated greedy test. greedy max cut: 39 (should be ≥23)
+generated SDP test. SDP max cut: 42.03 (should be ≈38.646374262433106)
+generated trevisan test. trevisan max cut: 39 (should be ≈23.372693318168544)
 
-generated brute force test (OPT). max cut: 16
-generated coin flip test. mean randomized max cut: 9.27 (should be ≈9
-generated greedy test. greedy max cut: 15 (should be ≥9)
-generated SDP test. SDP max cut: 15.46 (should be ≈14.048)
-generated trevisan test. trevisan max cut: 15 (should be ≥8.496
+all results should be ≤170.32732957389584
+generated coin flip test. mean randomized max cut: 128.22 (should be ≈128
+generated greedy test. greedy max cut: 160 (should be ≥128)
+generated SDP test. SDP max cut: 158.64 (should be ≈149.54739536588053)
+generated trevisan test. trevisan max cut: 160 (should be ≈90.4438120037387)
 
-generated brute force test (OPT). max cut: 17
-generated coin flip test. mean randomized max cut: 10.53 (should be ≈10
-generated greedy test. greedy max cut: 17 (should be ≥10)
-generated SDP test. SDP max cut: 15.9 (should be ≈14.926)
-generated trevisan test. trevisan max cut: 17 (should be ≥9.027000000000001
+all results should be ≤186.4927291085302
+generated coin flip test. mean randomized max cut: 140.14 (should be ≈138
+generated greedy test. greedy max cut: 170 (should be ≥138)
+generated SDP test. SDP max cut: 175.78 (should be ≈163.7406161572895)
+generated trevisan test. trevisan max cut: 170 (should be ≈99.02763915662955)
 
-generated brute force test (OPT). max cut: 3
-generated coin flip test. mean randomized max cut: 1.47 (should be ≈1
-generated greedy test. greedy max cut: 3 (should be ≥1)
-generated SDP test. SDP max cut: 3.0 (should be ≈2.634)
-generated trevisan test. trevisan max cut: 3 (should be ≥1.593
+all results should be ≤95.62564767481832
+generated coin flip test. mean randomized max cut: 60.39 (should be ≈60
+generated greedy test. greedy max cut: 82 (should be ≥60)
+generated SDP test. SDP max cut: 87.51 (should be ≈83.95931865849049)
+generated trevisan test. trevisan max cut: 82 (should be ≈50.77721891532853)
 
-generated brute force test (OPT). max cut: 12
-generated coin flip test. mean randomized max cut: 7.41 (should be ≈7
-generated greedy test. greedy max cut: 12 (should be ≥7)
-generated SDP test. SDP max cut: 11.59 (should be ≈10.536)
-generated trevisan test. trevisan max cut: 12 (should be ≥6.372
+all results should be ≤32.590797476298604
+generated coin flip test. mean randomized max cut: 16.65 (should be ≈16
+generated greedy test. greedy max cut: 25 (should be ≥16)
+generated SDP test. SDP max cut: 31.46 (should be ≈28.614720184190176)
+generated trevisan test. trevisan max cut: 25 (should be ≈17.30571345991456)
 
-generated brute force test (OPT). max cut: 12
-generated coin flip test. mean randomized max cut: 7.11 (should be ≈7
-generated greedy test. greedy max cut: 11 (should be ≥7)
-generated SDP test. SDP max cut: 11.99 (should be ≈10.536)
-generated trevisan test. trevisan max cut: 11 (should be ≥6.372
+all results should be ≤106.85109199462815
+generated coin flip test. mean randomized max cut: 70.73 (should be ≈70
+generated greedy test. greedy max cut: 95 (should be ≥70)
+generated SDP test. SDP max cut: 98.38 (should be ≈93.81525877128351)
+generated trevisan test. trevisan max cut: 95 (should be ≈56.73792984914755)
 
-generated brute force test (OPT). max cut: 10
-generated coin flip test. mean randomized max cut: 5.48 (should be ≈5
-generated greedy test. greedy max cut: 10 (should be ≥5)
-generated SDP test. SDP max cut: 9.53 (should be ≈8.78)
-generated trevisan test. trevisan max cut: 10 (should be ≥5.3100000000000005
+all results should be ≤45.79413766759922
+generated coin flip test. mean randomized max cut: 25.03 (should be ≈25
+generated greedy test. greedy max cut: 39 (should be ≥25)
+generated SDP test. SDP max cut: 43.62 (should be ≈40.20725287215212)
+generated trevisan test. trevisan max cut: 39 (should be ≈24.316687101495187)
 
-generated brute force test (OPT). max cut: 3
-generated coin flip test. mean randomized max cut: 1.48 (should be ≈1
-generated greedy test. greedy max cut: 3 (should be ≥1)
-generated SDP test. SDP max cut: 3.0 (should be ≈2.634)
-generated trevisan test. trevisan max cut: 3 (should be ≥1.593
+all results should be ≤186.66153599193973
+generated coin flip test. mean randomized max cut: 137.93 (should be ≈139
+generated greedy test. greedy max cut: 170 (should be ≥139)
+generated SDP test. SDP max cut: 175.14 (should be ≈163.8888286009231)
+generated trevisan test. trevisan max cut: 170 (should be ≈99.11727561172)
 
-generated brute force test (OPT). max cut: 21
-generated coin flip test. mean randomized max cut: 13.55 (should be ≈13
-generated greedy test. greedy max cut: 20 (should be ≥13)
-generated SDP test. SDP max cut: 19.9 (should be ≈18.438)
-generated trevisan test. trevisan max cut: 20 (should be ≥11.151
+all results should be ≤183.31234280591855
+generated coin flip test. mean randomized max cut: 133.1 (should be ≈134
+generated greedy test. greedy max cut: 162 (should be ≥134)
+generated SDP test. SDP max cut: 171.44 (should be ≈160.94823698359647)
+generated trevisan test. trevisan max cut: 162 (should be ≈97.33885402994275)
 
-generated brute force test (OPT). max cut: 11
-generated coin flip test. mean randomized max cut: 6.21 (should be ≈6
-generated greedy test. greedy max cut: 11 (should be ≥6)
-generated SDP test. SDP max cut: 10.97 (should be ≈9.658)
-generated trevisan test. trevisan max cut: 11 (should be ≥5.841
+all results should be ≤150.75273388244793
+generated coin flip test. mean randomized max cut: 103.27 (should be ≈103
+generated greedy test. greedy max cut: 132 (should be ≥103)
+generated SDP test. SDP max cut: 139.62 (should be ≈132.36090034878927)
+generated trevisan test. trevisan max cut: 132 (should be ≈80.04970169157986)
 
-generated brute force test (OPT). max cut: 27
-generated coin flip test. mean randomized max cut: 17.84 (should be ≈18
-generated greedy test. greedy max cut: 26 (should be ≥18)
-generated SDP test. SDP max cut: 26.37 (should be ≈23.706)
-generated trevisan test. trevisan max cut: 26 (should be ≥14.337000000000002
+all results should be ≤122.31167403628149
+generated coin flip test. mean randomized max cut: 79.05 (should be ≈80
+generated greedy test. greedy max cut: 109 (should be ≥80)
+generated SDP test. SDP max cut: 112.23 (should be ≈107.38964980385515)
+generated trevisan test. trevisan max cut: 109 (should be ≈64.94749891326548)
 
-generated brute force test (OPT). max cut: 17
-generated coin flip test. mean randomized max cut: 10.38 (should be ≈10
-generated greedy test. greedy max cut: 15 (should be ≥10)
-generated SDP test. SDP max cut: 16.47 (should be ≈14.926)
-generated trevisan test. trevisan max cut: 15 (should be ≥9.027000000000001
+all results should be ≤210.0767411949572
+generated coin flip test. mean randomized max cut: 155.15 (should be ≈158
+generated greedy test. greedy max cut: 203 (should be ≥158)
+generated SDP test. SDP max cut: 196.35 (should be ≈184.44737876917242)
+generated trevisan test. trevisan max cut: 203 (should be ≈111.55074957452229)
 
-generated brute force test (OPT). max cut: 26
-generated coin flip test. mean randomized max cut: 19.86 (should be ≈19
-generated greedy test. greedy max cut: 24 (should be ≥19)
-generated SDP test. SDP max cut: 25.24 (should be ≈22.828)
-generated trevisan test. trevisan max cut: 24 (should be ≥13.806000000000001
+all results should be ≤54.68372576251846
+generated coin flip test. mean randomized max cut: 30.11 (should be ≈30
+generated greedy test. greedy max cut: 45 (should be ≥30)
+generated SDP test. SDP max cut: 51.33 (should be ≈48.01231121949121)
+generated trevisan test. trevisan max cut: 45 (should be ≈29.037058379897307)
 
-generated brute force test (OPT). max cut: 13
-generated coin flip test. mean randomized max cut: 7.38 (should be ≈7
-generated greedy test. greedy max cut: 12 (should be ≥7)
-generated SDP test. SDP max cut: 12.26 (should be ≈11.414)
-generated trevisan test. trevisan max cut: 12 (should be ≥6.9030000000000005
+all results should be ≤175.63646627905126
+generated coin flip test. mean randomized max cut: 128.09 (should be ≈127
+generated greedy test. greedy max cut: 154 (should be ≥127)
+generated SDP test. SDP max cut: 164.14 (should be ≈154.208817393007)
+generated trevisan test. trevisan max cut: 154 (should be ≈93.26296359417623)
 
-generated brute force test (OPT). max cut: 21
-generated coin flip test. mean randomized max cut: 14.92 (should be ≈15
-generated greedy test. greedy max cut: 20 (should be ≥15)
-generated SDP test. SDP max cut: 19.83 (should be ≈18.438)
-generated trevisan test. trevisan max cut: 20 (should be ≥11.151
+all results should be ≤221.99431163352028
+generated coin flip test. mean randomized max cut: 165.69 (should be ≈166
+generated greedy test. greedy max cut: 207 (should be ≥166)
+generated SDP test. SDP max cut: 205.78 (should be ≈194.91100561423082)
+generated trevisan test. trevisan max cut: 207 (should be ≈117.87897947739927)
 
-generated brute force test (OPT). max cut: 16
-generated coin flip test. mean randomized max cut: 8.91 (should be ≈9
-generated greedy test. greedy max cut: 14 (should be ≥9)
-generated SDP test. SDP max cut: 15.49 (should be ≈14.048)
-generated trevisan test. trevisan max cut: 14 (should be ≥8.496
+all results should be ≤184.3969105642675
+generated coin flip test. mean randomized max cut: 132.77 (should be ≈133
+generated greedy test. greedy max cut: 167 (should be ≥133)
+generated SDP test. SDP max cut: 171.13 (should be ≈161.90048747542687)
+generated trevisan test. trevisan max cut: 167 (should be ≈97.91475950962605)
 
-generated brute force test (OPT). max cut: 20
-generated coin flip test. mean randomized max cut: 13.81 (should be ≈13
-generated greedy test. greedy max cut: 19 (should be ≥13)
-generated SDP test. SDP max cut: 19.48 (should be ≈17.56)
-generated trevisan test. trevisan max cut: 19 (should be ≥10.620000000000001
+all results should be ≤214.19003689072102
+generated coin flip test. mean randomized max cut: 160.77 (should be ≈160
+generated greedy test. greedy max cut: 187 (should be ≥160)
+generated SDP test. SDP max cut: 201.39 (should be ≈188.05885239005306)
+generated trevisan test. trevisan max cut: 187 (should be ≈113.73490958897287)
 
-generated brute force test (OPT). max cut: 9
-generated coin flip test. mean randomized max cut: 4.58 (should be ≈4
-generated greedy test. greedy max cut: 8 (should be ≥4)
-generated SDP test. SDP max cut: 9.0 (should be ≈7.902)
-generated trevisan test. trevisan max cut: 8 (should be ≥4.779
+all results should be ≤95.88191910097528
+generated coin flip test. mean randomized max cut: 59.52 (should be ≈59
+generated greedy test. greedy max cut: 83 (should be ≥59)
+generated SDP test. SDP max cut: 87.45 (should be ≈84.18432497065629)
+generated trevisan test. trevisan max cut: 83 (should be ≈50.91329904261788)
 
-generated brute force test (OPT). max cut: 27
-generated coin flip test. mean randomized max cut: 18.54 (should be ≈18
-generated greedy test. greedy max cut: 24 (should be ≥18)
-generated SDP test. SDP max cut: 25.88 (should be ≈23.706)
-generated trevisan test. trevisan max cut: 24 (should be ≥14.337000000000002
+all results should be ≤153.61270666382444
+generated coin flip test. mean randomized max cut: 107.58 (should be ≈107
+generated greedy test. greedy max cut: 140 (should be ≥107)
+generated SDP test. SDP max cut: 140.67 (should be ≈134.87195645083787)
+generated trevisan test. trevisan max cut: 140 (should be ≈81.56834723849079)
 
-generated brute force test (OPT). max cut: 21
-generated coin flip test. mean randomized max cut: 13.69 (should be ≈13
-generated greedy test. greedy max cut: 21 (should be ≥13)
-generated SDP test. SDP max cut: 19.71 (should be ≈18.438)
-generated trevisan test. trevisan max cut: 21 (should be ≥11.151
+all results should be ≤227.88897596437192
+generated coin flip test. mean randomized max cut: 176.47 (should be ≈176
+generated greedy test. greedy max cut: 210 (should be ≥176)
+generated SDP test. SDP max cut: 213.23 (should be ≈200.08652089671855)
+generated trevisan test. trevisan max cut: 210 (should be ≈121.00904623708149)
 
-generated brute force test (OPT). max cut: 7
-generated coin flip test. mean randomized max cut: 3.32 (should be ≈3
-generated greedy test. greedy max cut: 7 (should be ≥3)
-generated SDP test. SDP max cut: 7.0 (should be ≈6.146)
-generated trevisan test. trevisan max cut: 7 (should be ≥3.717
+all results should be ≤43.99242529514723
+generated coin flip test. mean randomized max cut: 23.24 (should be ≈23
+generated greedy test. greedy max cut: 36 (should be ≥23)
+generated SDP test. SDP max cut: 41.5 (should be ≈38.62534940913927)
+generated trevisan test. trevisan max cut: 36 (should be ≈23.359977831723178)
 
-generated brute force test (OPT). max cut: 11
-generated coin flip test. mean randomized max cut: 6.2 (should be ≈6
-generated greedy test. greedy max cut: 9 (should be ≥6)
-generated SDP test. SDP max cut: 10.98 (should be ≈9.658)
-generated trevisan test. trevisan max cut: 9 (should be ≥5.841
+all results should be ≤206.53340433735625
+generated coin flip test. mean randomized max cut: 154.8 (should be ≈155
+generated greedy test. greedy max cut: 188 (should be ≥155)
+generated SDP test. SDP max cut: 191.63 (should be ≈181.3363290081988)
+generated trevisan test. trevisan max cut: 188 (should be ≈109.66923770313618)
 
-generated brute force test (OPT). max cut: 14
-generated coin flip test. mean randomized max cut: 7.81 (should be ≈8
-generated greedy test. greedy max cut: 12 (should be ≥8)
-generated SDP test. SDP max cut: 13.28 (should be ≈12.292)
-generated trevisan test. trevisan max cut: 12 (should be ≥7.434
+all results should be ≤223.67673505970467
+generated coin flip test. mean randomized max cut: 171.62 (should be ≈171
+generated greedy test. greedy max cut: 212 (should be ≥171)
+generated SDP test. SDP max cut: 208.69 (should be ≈196.3881733824207)
+generated trevisan test. trevisan max cut: 212 (should be ≈118.77234631670318)
 
-generated brute force test (OPT). max cut: 13
-generated coin flip test. mean randomized max cut: 7.66 (should be ≈7
-generated greedy test. greedy max cut: 12 (should be ≥7)
-generated SDP test. SDP max cut: 12.72 (should be ≈11.414)
-generated trevisan test. trevisan max cut: 12 (should be ≥6.9030000000000005
+all results should be ≤261.0692210810855
+generated coin flip test. mean randomized max cut: 200.29 (should be ≈201
+generated greedy test. greedy max cut: 232 (should be ≥201)
+generated SDP test. SDP max cut: 246.52 (should be ≈229.21877610919307)
+generated trevisan test. trevisan max cut: 232 (should be ≈138.6277563940564)
 
-generated brute force test (OPT). max cut: 16
-generated coin flip test. mean randomized max cut: 9.44 (should be ≈9
-generated greedy test. greedy max cut: 16 (should be ≥9)
-generated SDP test. SDP max cut: 15.42 (should be ≈14.048)
-generated trevisan test. trevisan max cut: 16 (should be ≥8.496
+all results should be ≤43.45420817998227
+generated coin flip test. mean randomized max cut: 23.43 (should be ≈23
+generated greedy test. greedy max cut: 39 (should be ≥23)
+generated SDP test. SDP max cut: 40.86 (should be ≈38.15279478202443)
+generated trevisan test. trevisan max cut: 39 (should be ≈23.074184543570585)
 
-generated brute force test (OPT). max cut: 23
-generated coin flip test. mean randomized max cut: 14.57 (should be ≈15
-generated greedy test. greedy max cut: 21 (should be ≥15)
-generated SDP test. SDP max cut: 21.94 (should be ≈20.194)
-generated trevisan test. trevisan max cut: 21 (should be ≥12.213000000000001
+all results should be ≤213.39811033822468
+generated coin flip test. mean randomized max cut: 157.6 (should be ≈157
+generated greedy test. greedy max cut: 194 (should be ≥157)
+generated SDP test. SDP max cut: 198.31 (should be ≈187.36354087696128)
+generated trevisan test. trevisan max cut: 194 (should be ≈113.31439658959731)
 
-generated brute force test (OPT). max cut: 13
-generated coin flip test. mean randomized max cut: 7.55 (should be ≈7
-generated greedy test. greedy max cut: 11 (should be ≥7)
-generated SDP test. SDP max cut: 13.0 (should be ≈11.414)
-generated trevisan test. trevisan max cut: 11 (should be ≥6.9030000000000005
+all results should be ≤127.11319292440808
+generated coin flip test. mean randomized max cut: 81.78 (should be ≈82
+generated greedy test. greedy max cut: 115 (should be ≥82)
+generated SDP test. SDP max cut: 116.44 (should be ≈111.6053833876303)
+generated trevisan test. trevisan max cut: 115 (should be ≈67.4971054428607)
 
-generated brute force test (OPT). max cut: 17
-generated coin flip test. mean randomized max cut: 10.33 (should be ≈10
-generated greedy test. greedy max cut: 15 (should be ≥10)
-generated SDP test. SDP max cut: 16.22 (should be ≈14.926)
-generated trevisan test. trevisan max cut: 15 (should be ≥9.027000000000001
+all results should be ≤116.01537160716565
+generated coin flip test. mean randomized max cut: 75.08 (should be ≈75
+generated greedy test. greedy max cut: 106 (should be ≥75)
+generated SDP test. SDP max cut: 106.57 (should be ≈101.86149627109144)
+generated trevisan test. trevisan max cut: 106 (should be ≈61.604162323404964)
 
-generated brute force test (OPT). max cut: 8
-generated coin flip test. mean randomized max cut: 3.97 (should be ≈4
-generated greedy test. greedy max cut: 7 (should be ≥4)
-generated SDP test. SDP max cut: 8.0 (should be ≈7.024)
-generated trevisan test. trevisan max cut: 7 (should be ≥4.248
+all results should be ≤49.596018715839236
+generated coin flip test. mean randomized max cut: 26.12 (should be ≈27
+generated greedy test. greedy max cut: 44 (should be ≥27)
+generated SDP test. SDP max cut: 46.29 (should be ≈43.545304432506846)
+generated trevisan test. trevisan max cut: 44 (should be ≈26.335485938110637)
 
-generated brute force test (OPT). max cut: 29
-generated coin flip test. mean randomized max cut: 21.41 (should be ≈21
-generated greedy test. greedy max cut: 29 (should be ≥21)
-generated SDP test. SDP max cut: 28.13 (should be ≈25.462)
-generated trevisan test. trevisan max cut: 29 (should be ≥15.399000000000001
+all results should be ≤145.3928658169832
+generated coin flip test. mean randomized max cut: 98.83 (should be ≈98
+generated greedy test. greedy max cut: 129 (should be ≥98)
+generated SDP test. SDP max cut: 134.43 (should be ≈127.65493618731125)
+generated trevisan test. trevisan max cut: 129 (should be ≈77.20361174881809)
 
-generated brute force test (OPT). max cut: 6
-generated coin flip test. mean randomized max cut: 2.98 (should be ≈3
-generated greedy test. greedy max cut: 5 (should be ≥3)
-generated SDP test. SDP max cut: 6.0 (should be ≈5.268)
-generated trevisan test. trevisan max cut: 5 (should be ≥3.186
+all results should be ≤216.25924945870636
+generated coin flip test. mean randomized max cut: 157.82 (should be ≈157
+generated greedy test. greedy max cut: 196 (should be ≥157)
+generated SDP test. SDP max cut: 201.32 (should be ≈189.8756210247442)
+generated trevisan test. trevisan max cut: 196 (should be ≈114.83366146257309)
 
-generated brute force test (OPT). max cut: 3
-generated coin flip test. mean randomized max cut: 1.49 (should be ≈1
-generated greedy test. greedy max cut: 3 (should be ≥1)
-generated SDP test. SDP max cut: 3.0 (should be ≈2.634)
-generated trevisan test. trevisan max cut: 3 (should be ≥1.593
+all results should be ≤152.6370236133675
+generated coin flip test. mean randomized max cut: 102.98 (should be ≈103
+generated greedy test. greedy max cut: 137 (should be ≥103)
+generated SDP test. SDP max cut: 140.55 (should be ≈134.01530673253666)
+generated trevisan test. trevisan max cut: 137 (should be ≈81.05025953869814)
 
-generated brute force test (OPT). max cut: 4
-generated coin flip test. mean randomized max cut: 1.89 (should be ≈2
-generated greedy test. greedy max cut: 4 (should be ≥2)
-generated SDP test. SDP max cut: 4.0 (should be ≈3.512)
-generated trevisan test. trevisan max cut: 4 (should be ≥2.124
+all results should be ≤18.99729205079815
+generated coin flip test. mean randomized max cut: 9.52 (should be ≈9
+generated greedy test. greedy max cut: 19 (should be ≥9)
+generated SDP test. SDP max cut: 19.0 (should be ≈16.679622420600776)
+generated trevisan test. trevisan max cut: 19 (should be ≈10.08756207897382)
 
-generated brute force test (OPT). max cut: 20
-generated coin flip test. mean randomized max cut: 11.37 (should be ≈11
-generated greedy test. greedy max cut: 18 (should be ≥11)
-generated SDP test. SDP max cut: 19.18 (should be ≈17.56)
-generated trevisan test. trevisan max cut: 18 (should be ≥10.620000000000001
+all results should be ≤207.6436994619289
+generated coin flip test. mean randomized max cut: 151.46 (should be ≈151
+generated greedy test. greedy max cut: 188 (should be ≥151)
+generated SDP test. SDP max cut: 192.72 (should be ≈182.31116812757355)
+generated trevisan test. trevisan max cut: 188 (should be ≈110.25880441428424)
 
-generated brute force test (OPT). max cut: 17
-generated coin flip test. mean randomized max cut: 9.76 (should be ≈10
-generated greedy test. greedy max cut: 17 (should be ≥10)
-generated SDP test. SDP max cut: 15.95 (should be ≈14.926)
-generated trevisan test. trevisan max cut: 17 (should be ≥9.027000000000001
+all results should be ≤284.1186363375735
+generated coin flip test. mean randomized max cut: 219.67 (should be ≈220
+generated greedy test. greedy max cut: 261 (should be ≥220)
+generated SDP test. SDP max cut: 269.55 (should be ≈249.45616270438953)
+generated trevisan test. trevisan max cut: 261 (should be ≈150.86699589525153)
 
-generated brute force test (OPT). max cut: 19
-generated coin flip test. mean randomized max cut: 11.15 (should be ≈11
-generated greedy test. greedy max cut: 18 (should be ≥11)
-generated SDP test. SDP max cut: 18.04 (should be ≈16.682)
-generated trevisan test. trevisan max cut: 18 (should be ≥10.089
+all results should be ≤153.68055970855843
+generated coin flip test. mean randomized max cut: 104.72 (should be ≈104
+generated greedy test. greedy max cut: 140 (should be ≥104)
+generated SDP test. SDP max cut: 140.6 (should be ≈134.9315314241143)
+generated trevisan test. trevisan max cut: 140 (should be ≈81.60437720524453)
 
-generated brute force test (OPT). max cut: 6
-generated coin flip test. mean randomized max cut: 2.76 (should be ≈3
-generated greedy test. greedy max cut: 6 (should be ≥3)
-generated SDP test. SDP max cut: 6.0 (should be ≈5.268)
-generated trevisan test. trevisan max cut: 6 (should be ≥3.186
+all results should be ≤185.62985220735487
+generated coin flip test. mean randomized max cut: 128.77 (should be ≈129
+generated greedy test. greedy max cut: 167 (should be ≥129)
+generated SDP test. SDP max cut: 171.91 (should be ≈162.98301023805757)
+generated trevisan test. trevisan max cut: 167 (should be ≈98.56945152210544)
 
-generated brute force test (OPT). max cut: 33
-generated coin flip test. mean randomized max cut: 22.64 (should be ≈22
-generated greedy test. greedy max cut: 32 (should be ≥22)
-generated SDP test. SDP max cut: 31.24 (should be ≈28.974)
-generated trevisan test. trevisan max cut: 32 (should be ≥17.523
+all results should be ≤289.4686089549617
+generated coin flip test. mean randomized max cut: 225.0 (should be ≈223
+generated greedy test. greedy max cut: 261 (should be ≥223)
+generated SDP test. SDP max cut: 274.33 (should be ≈254.15343866245638)
+generated trevisan test. trevisan max cut: 261 (should be ≈153.7078313550847)
 
-generated brute force test (OPT). max cut: 18
-generated coin flip test. mean randomized max cut: 9.73 (should be ≈10
-generated greedy test. greedy max cut: 16 (should be ≥10)
-generated SDP test. SDP max cut: 17.39 (should be ≈15.804)
-generated trevisan test. trevisan max cut: 16 (should be ≥9.558
+all results should be ≤15.997791634877107
+generated coin flip test. mean randomized max cut: 8.13 (should be ≈8
+generated greedy test. greedy max cut: 15 (should be ≥8)
+generated SDP test. SDP max cut: 16.0 (should be ≈14.0460610554221)
+generated trevisan test. trevisan max cut: 15 (should be ≈8.494827358119744)
 
-generated brute force test (OPT). max cut: 31
-generated coin flip test. mean randomized max cut: 22.26 (should be ≈22
-generated greedy test. greedy max cut: 27 (should be ≥22)
-generated SDP test. SDP max cut: 29.56 (should be ≈27.218)
-generated trevisan test. trevisan max cut: 27 (should be ≥16.461000000000002
+all results should be ≤283.16889046751754
+generated coin flip test. mean randomized max cut: 217.65 (should be ≈218
+generated greedy test. greedy max cut: 267 (should be ≥218)
+generated SDP test. SDP max cut: 266.08 (should be ≈248.6222858304804)
+generated trevisan test. trevisan max cut: 267 (should be ≈150.36268083825183)
 
-generated brute force test (OPT). max cut: 24
-generated coin flip test. mean randomized max cut: 15.74 (should be ≈15
-generated greedy test. greedy max cut: 23 (should be ≥15)
-generated SDP test. SDP max cut: 22.85 (should be ≈21.072)
-generated trevisan test. trevisan max cut: 23 (should be ≥12.744
+all results should be ≤282.1036314301249
+generated coin flip test. mean randomized max cut: 212.01 (should be ≈212
+generated greedy test. greedy max cut: 251 (should be ≥212)
+generated SDP test. SDP max cut: 264.74 (should be ≈247.68698839564965)
+generated trevisan test. trevisan max cut: 251 (should be ≈149.79702828939634)
 
-generated brute force test (OPT). max cut: 31
-generated coin flip test. mean randomized max cut: 22.59 (should be ≈22
-generated greedy test. greedy max cut: 28 (should be ≥22)
-generated SDP test. SDP max cut: 29.45 (should be ≈27.218)
-generated trevisan test. trevisan max cut: 28 (should be ≥16.461000000000002
+all results should be ≤84.14128976058134
+generated coin flip test. mean randomized max cut: 48.12 (should be ≈49
+generated greedy test. greedy max cut: 74 (should be ≥49)
+generated SDP test. SDP max cut: 75.81 (should be ≈73.87605240979042)
+generated trevisan test. trevisan max cut: 74 (should be ≈44.679024862868694)
 
-generated brute force test (OPT). max cut: 27
-generated coin flip test. mean randomized max cut: 17.52 (should be ≈17
-generated greedy test. greedy max cut: 27 (should be ≥17)
-generated SDP test. SDP max cut: 26.25 (should be ≈23.706)
-generated trevisan test. trevisan max cut: 27 (should be ≥14.337000000000002
+all results should be ≤79.77101450115292
+generated coin flip test. mean randomized max cut: 46.01 (should be ≈46
+generated greedy test. greedy max cut: 70 (should be ≥46)
+generated SDP test. SDP max cut: 72.46 (should be ≈70.03895073201227)
+generated trevisan test. trevisan max cut: 70 (should be ≈42.3584087001122)
 
-generated brute force test (OPT). max cut: 40
-generated coin flip test. mean randomized max cut: 28.96 (should be ≈29
-generated greedy test. greedy max cut: 40 (should be ≥29)
-generated SDP test. SDP max cut: 38.42 (should be ≈35.12)
-generated trevisan test. trevisan max cut: 40 (should be ≥21.240000000000002
+all results should be ≤228.13454837998762
+generated coin flip test. mean randomized max cut: 165.09 (should be ≈165
+generated greedy test. greedy max cut: 206 (should be ≥165)
+generated SDP test. SDP max cut: 213.26 (should be ≈200.30213347762913)
+generated trevisan test. trevisan max cut: 206 (should be ≈121.13944518977344)
 
-generated brute force test (OPT). max cut: 24
-generated coin flip test. mean randomized max cut: 14.25 (should be ≈14
-generated greedy test. greedy max cut: 21 (should be ≥14)
-generated SDP test. SDP max cut: 22.57 (should be ≈21.072)
-generated trevisan test. trevisan max cut: 21 (should be ≥12.744
+all results should be ≤219.74988571987802
+generated coin flip test. mean randomized max cut: 156.61 (should be ≈157
+generated greedy test. greedy max cut: 204 (should be ≥157)
+generated SDP test. SDP max cut: 204.81 (should be ≈192.9403996620529)
+generated trevisan test. trevisan max cut: 204 (should be ≈116.68718931725523)
 
+all results should be ≤242.64377845583545
+generated coin flip test. mean randomized max cut: 176.36 (should be ≈176
+generated greedy test. greedy max cut: 213 (should be ≥176)
+generated SDP test. SDP max cut: 225.81 (should be ≈213.04123748422353)
+generated trevisan test. trevisan max cut: 213 (should be ≈128.84384636004862)
+
+all results should be ≤269.8451162037034
+generated coin flip test. mean randomized max cut: 204.92 (should be ≈205
+generated greedy test. greedy max cut: 250 (should be ≥205)
+generated SDP test. SDP max cut: 251.39 (should be ≈236.92401202685159)
+generated trevisan test. trevisan max cut: 250 (should be ≈143.28775670416653)
+
+all results should be ≤325.67730809940315
+generated coin flip test. mean randomized max cut: 255.98 (should be ≈253
+generated greedy test. greedy max cut: 296 (should be ≥253)
+generated SDP test. SDP max cut: 308.44 (should be ≈285.944676511276)
+generated trevisan test. trevisan max cut: 296 (should be ≈172.93465060078307)
+
+all results should be ≤123.67154239043987
+generated coin flip test. mean randomized max cut: 80.08 (should be ≈80
+generated greedy test. greedy max cut: 107 (should be ≥80)
+generated SDP test. SDP max cut: 114.06 (should be ≈108.5836142188062)
+generated trevisan test. trevisan max cut: 107 (should be ≈65.66958900932357)
+
+all results should be ≤48.34478498535204
+generated coin flip test. mean randomized max cut: 25.87 (should be ≈25
+generated greedy test. greedy max cut: 44 (should be ≥25)
+generated SDP test. SDP max cut: 45.84 (should be ≈42.44672121713909)
+generated trevisan test. trevisan max cut: 44 (should be ≈25.671080827221935)
+
+all results should be ≤158.4397593643506
+generated coin flip test. mean randomized max cut: 104.96 (should be ≈105
+generated greedy test. greedy max cut: 137 (should be ≥105)
+generated SDP test. SDP max cut: 144.33 (should be ≈139.11010872189982)
+generated trevisan test. trevisan max cut: 137 (should be ≈84.13151222247018)
+
+all results should be ≤325.31303850851333
+generated coin flip test. mean randomized max cut: 254.33 (should be ≈254
+generated greedy test. greedy max cut: 301 (should be ≥254)
+generated SDP test. SDP max cut: 309.27 (should be ≈285.6248478104747)
+generated trevisan test. trevisan max cut: 301 (should be ≈172.74122344802058)
+
+all results should be ≤188.46788572744128
+generated coin flip test. mean randomized max cut: 131.77 (should be ≈130
+generated greedy test. greedy max cut: 167 (should be ≥130)
+generated SDP test. SDP max cut: 172.84 (should be ≈165.47480366869345)
+generated trevisan test. trevisan max cut: 167 (should be ≈100.07644732127133)
+
+all results should be ≤25.770430376118796
+generated coin flip test. mean randomized max cut: 13.63 (should be ≈13
+generated greedy test. greedy max cut: 25 (should be ≥13)
+generated SDP test. SDP max cut: 24.98 (should be ≈22.6264378702323)
+generated trevisan test. trevisan max cut: 25 (should be ≈13.684098529719082)
+
+all results should be ≤230.87110819309402
+generated coin flip test. mean randomized max cut: 168.09 (should be ≈168
+generated greedy test. greedy max cut: 206 (should be ≥168)
+generated SDP test. SDP max cut: 214.45 (should be ≈202.70483299353654)
+generated trevisan test. trevisan max cut: 206 (should be ≈122.59255845053293)
+
+all results should be ≤150.99281543914896
+generated coin flip test. mean randomized max cut: 97.65 (should be ≈98
+generated greedy test. greedy max cut: 132 (should be ≥98)
+generated SDP test. SDP max cut: 137.95 (should be ≈132.5716919555728)
+generated trevisan test. trevisan max cut: 132 (should be ≈80.1771849981881)
+
+all results should be ≤170.5856467129171
+generated coin flip test. mean randomized max cut: 115.61 (should be ≈114
+generated greedy test. greedy max cut: 152 (should be ≥114)
+generated SDP test. SDP max cut: 157.5 (should be ≈149.7741978139412)
+generated trevisan test. trevisan max cut: 152 (should be ≈90.58097840455899)
+
+all results should be ≤208.8082513837972
+generated coin flip test. mean randomized max cut: 146.42 (should be ≈146
+generated greedy test. greedy max cut: 191 (should be ≥146)
+generated SDP test. SDP max cut: 192.04 (should be ≈183.33364471497393)
+generated trevisan test. trevisan max cut: 191 (should be ≈110.87718148479632)
+
+all results should be ≤333.12331043547033
+generated coin flip test. mean randomized max cut: 262.4 (should be ≈263
+generated greedy test. greedy max cut: 311 (should be ≥263)
+generated SDP test. SDP max cut: 313.39 (should be ≈292.48226656234294)
+generated trevisan test. trevisan max cut: 311 (should be ≈176.88847784123476)
+
+all results should be ≤149.0482488872608
+generated coin flip test. mean randomized max cut: 95.59 (should be ≈95
+generated greedy test. greedy max cut: 128 (should be ≥95)
+generated SDP test. SDP max cut: 136.35 (should be ≈130.864362523015)
+generated trevisan test. trevisan max cut: 128 (should be ≈79.14462015913548)
+
+all results should be ≤210.99466814367437
+generated coin flip test. mean randomized max cut: 148.05 (should be ≈148
+generated greedy test. greedy max cut: 189 (should be ≥148)
+generated SDP test. SDP max cut: 195.9 (should be ≈185.2533186301461)
+generated trevisan test. trevisan max cut: 189 (should be ≈112.0381687842911)
+
+all results should be ≤134.60779093723937
+generated coin flip test. mean randomized max cut: 84.31 (should be ≈85
+generated greedy test. greedy max cut: 120 (should be ≥85)
+generated SDP test. SDP max cut: 122.98 (should be ≈118.18564044289617)
+generated trevisan test. trevisan max cut: 120 (should be ≈71.47673698767412)
+
+all results should be ≤29.00557836254038
+generated coin flip test. mean randomized max cut: 14.23 (should be ≈14
+generated greedy test. greedy max cut: 27 (should be ≥14)
+generated SDP test. SDP max cut: 29.0 (should be ≈25.466897802310452)
+generated trevisan test. trevisan max cut: 27 (should be ≈15.401962110508942)
+
+all results should be ≤11.997677007700332
+generated coin flip test. mean randomized max cut: 6.03 (should be ≈6
+generated greedy test. greedy max cut: 12 (should be ≥6)
+generated SDP test. SDP max cut: 12.0 (should be ≈10.533960412760893)
+generated trevisan test. trevisan max cut: 12 (should be ≈6.370766491088877)
+
+all results should be ≤257.4065358348817
+generated coin flip test. mean randomized max cut: 190.58 (should be ≈190
+generated greedy test. greedy max cut: 232 (should be ≥190)
+generated SDP test. SDP max cut: 238.87 (should be ≈226.00293846302614)
+generated trevisan test. trevisan max cut: 232 (should be ≈136.68287052832218)
+
+all results should be ≤312.3965073929324
+generated coin flip test. mean randomized max cut: 238.05 (should be ≈238
+generated greedy test. greedy max cut: 282 (should be ≥238)
+generated SDP test. SDP max cut: 294.22 (should be ≈274.28413349099463)
+generated trevisan test. trevisan max cut: 282 (should be ≈165.8825454256471)
+
+all results should be ≤289.0400322925062
+generated coin flip test. mean randomized max cut: 219.55 (should be ≈218
+generated greedy test. greedy max cut: 257 (should be ≥218)
+generated SDP test. SDP max cut: 269.92 (should be ≈253.77714835282046)
+generated trevisan test. trevisan max cut: 257 (should be ≈153.48025714732083)
+
+all results should be ≤356.1034217268889
+generated coin flip test. mean randomized max cut: 282.58 (should be ≈281
+generated greedy test. greedy max cut: 331 (should be ≥281)
+generated SDP test. SDP max cut: 335.97 (should be ≈312.65880427620846)
+generated trevisan test. trevisan max cut: 331 (should be ≈189.090916936978)
+
+all results should be ≤206.81206327839868
+generated coin flip test. mean randomized max cut: 147.76 (should be ≈147
+generated greedy test. greedy max cut: 189 (should be ≥147)
+generated SDP test. SDP max cut: 190.19 (should be ≈181.58099155843405)
+generated trevisan test. trevisan max cut: 189 (should be ≈109.81720560082971)
