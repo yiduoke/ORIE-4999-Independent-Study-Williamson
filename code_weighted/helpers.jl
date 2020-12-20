@@ -1,5 +1,8 @@
 using LinearAlgebra
 
+function num_vertices(adj_matrix)
+    return Int(sqrt(length(adj_matrix)))
+end
 
 """
     smallest_eigenvector(matrix)
@@ -20,7 +23,7 @@ graph represented by `adj_matrix`.
 The vertices by which to be induced are `V_prime`.
 """
 function induced_subgraph(adj_matrix, V_prime)
-    n = length(adj_lists)
+    n = num_vertices(adj_matrix)
     induced_subgraph = zeros(n,n)
     [induced_subgraph[i,j] = adj_matrix[i,j] for i ∈ V_prime for j ∈ V_prime]
     return induced_subgraph
@@ -34,7 +37,7 @@ neighboring vertices from graph `adj_matrix` that aren't in the vertex
 subset `A`
 """
 function adj_list_cut_val(adj_matrix, vertex, A)
-    n = Int(sqrt(length(adj_matrix)))
+    n = num_vertices(adj_matrix)
     relevant_row = adj_matrix[vertex, :]
     sum([relevant_row[i] for i ∈ filter(i -> relevant_row[i] != 0 && !(i in A), 1:n)])
 end
@@ -47,7 +50,7 @@ end
     where A is all vertices one side of the cut.
 """
 function cut_value(adj_matrix, A)
-    return length(A)>0 ? sum([adj_list_cut(adj_matrix, vertex, A) for vertex in A]) : 0 # need the ternary operator because reduce doesn't work on empty lists
+    length(A)>0 ? sum([adj_list_cut_val(adj_matrix, vertex, A) for vertex in A]) : 0 # need the ternary operator because reduce doesn't work on empty lists
 end
 
 """

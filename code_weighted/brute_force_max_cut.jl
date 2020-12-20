@@ -13,7 +13,7 @@ The algorithm is brute force and thus runs in time exponential
 to the number of vertices.
 """
 function brute_force_max_cut(adj_matrix)
-  n = Int(sqrt(length(adj_matrix)))
+  n = num_vertices(adj_matrix)
   all_possible_A = vcat([collect(combinations(1:n,i)) for i=1:n-1]...) # all non-empty proper subsets of V
   current_max_partition = [] # running partition (i.e. set A⊂V) with max cut value
   current_max_cut = 0 # running max cut value

@@ -5,28 +5,26 @@ include("helpers.jl")
 
 
 """
-    greedy_max_cut(adj_lists) 
+    greedy_max_cut(adj_matrix) 
 
-returns, for a given graph in adjacency list form `adj_lists`,
-the 2-approximation max cut value and its corresponding vertex 
+returns, for a given graph in adjacency matrix form `adj_matrix`,
+the 0.5-approximation max cut value and its corresponding vertex 
 set partition. The expected cut value is |E|/2.
-
-`adj_lists` is a Dict with each vertex as a key, whose value 
-is its neighboring vertices in the form of an Array. 
 
 This is a greedy algorithm and runs in time linear to the number
 of vertices.
 """
-function greedy_max_cut(adj_lists)
+function greedy_max_cut(adj_matrix)
     A = []
     B = []
-    for vertex in 1:length(adj_lists)
-        num_B_neighbors = length(intersect(adj_lists[vertex], B))
-        num_A_neighbors = length(intersect(adj_lists[vertex], A))
+    for vertex in 1:num_vertices(adj_matrix)
+        relevant_row = adj_matrix[vertex, :]
+        A_neighbors_weight = sum([relevant_row[i] for i ∈ filter(i -> relevant_row[i] != 0 && i in A, 1:n)])
+        B_neighbors_weight = sum([relevant_row[i] for i ∈ filter(i -> relevant_row[i] != 0 && i in B, 1:n)])
 
-        num_A_neighbors > num_B_neighbors ? B = union(B, [vertex]) : A = union(A, [vertex])
+        A_neighbors_weight > B_neighbors_weight ? B = union(B, [vertex]) : A = union(A, [vertex])
     end
-    cut_val = cut_value(adj_lists, A)
+    cut_val = cut_value(adj_matrix, A)
 
     return (cut_val, A)
 end
