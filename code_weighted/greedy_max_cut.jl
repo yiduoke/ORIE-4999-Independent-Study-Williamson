@@ -9,7 +9,7 @@ include("helpers.jl")
 
 returns, for a given graph in adjacency matrix form `adj_matrix`,
 the 0.5-approximation max cut value and its corresponding vertex 
-set partition. The expected cut value is |E|/2.
+set partition.
 
 This is a greedy algorithm and runs in time linear to the number
 of vertices.

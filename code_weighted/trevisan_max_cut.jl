@@ -40,7 +40,7 @@ function two_thresholds_spectral_cut(adj_matrix)
 
     neg_sqrt_D = zeros(n,n)
     [neg_sqrt_D[i,i] = D[i,i]==0 ? 0 : D[i,i]^(-1/2) for i ∈ 1:n]
-    x = smallest_eigenvector(neg_sqrt_D * A * neg_sqrt_D)
+    x = real.(smallest_eigenvector(neg_sqrt_D * A * neg_sqrt_D)) # sometimes theres a 0.0im part for whatever reason
 
     Y = zeros(n,n)
     [Y[i,k] = y_ik(x,i,k) for i ∈ 1:n for k ∈ 1:n]
